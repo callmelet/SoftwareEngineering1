@@ -16,6 +16,7 @@ namespace SoftwareEngineering
         {
             InitializeComponent();
             Console.WriteLine("Hello World");
+            Console.WriteLine("Hi");
         }
 
         private void Form1_Load(object sender, EventArgs e)
