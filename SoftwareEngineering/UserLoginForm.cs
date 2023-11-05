@@ -16,5 +16,25 @@ namespace SoftwareEngineering
         {
             InitializeComponent();
         }
+
+        private void textBox1username_user_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1userpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginbutton1_user_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2register_user_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.username = new System.Windows.Forms.Label();
+            this.usernamelabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1username = new System.Windows.Forms.TextBox();
@@ -38,15 +38,15 @@
             this.button1back_user = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // username
+            // usernamelabel
             // 
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username.Location = new System.Drawing.Point(144, 79);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(209, 35);
-            this.username.TabIndex = 1;
-            this.username.Text = "Username";
-            this.username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usernamelabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usernamelabel.Location = new System.Drawing.Point(144, 79);
+            this.usernamelabel.Name = "usernamelabel";
+            this.usernamelabel.Size = new System.Drawing.Size(209, 35);
+            this.usernamelabel.TabIndex = 1;
+            this.usernamelabel.Text = "Username";
+            this.usernamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -74,20 +74,28 @@
             this.textBox1username.Name = "textBox1username";
             this.textBox1username.Size = new System.Drawing.Size(221, 26);
             this.textBox1username.TabIndex = 4;
+            this.textBox1username.Click += new System.EventHandler(this.textBox1username_TextChanged);
+            this.textBox1username.TextChanged += new System.EventHandler(this.textBox1username_TextChanged);
             // 
             // textBox1_password
             // 
             this.textBox1_password.Location = new System.Drawing.Point(407, 160);
             this.textBox1_password.Name = "textBox1_password";
+            this.textBox1_password.PasswordChar = '*';
             this.textBox1_password.Size = new System.Drawing.Size(221, 26);
             this.textBox1_password.TabIndex = 5;
+            this.textBox1_password.Click += new System.EventHandler(this.textBox1_password_TextChanged);
+            this.textBox1_password.TextChanged += new System.EventHandler(this.textBox1_password_TextChanged);
             // 
             // textBox2_passwordconfirm
             // 
             this.textBox2_passwordconfirm.Location = new System.Drawing.Point(407, 231);
             this.textBox2_passwordconfirm.Name = "textBox2_passwordconfirm";
+            this.textBox2_passwordconfirm.PasswordChar = '*';
             this.textBox2_passwordconfirm.Size = new System.Drawing.Size(221, 26);
             this.textBox2_passwordconfirm.TabIndex = 6;
+            this.textBox2_passwordconfirm.Click += new System.EventHandler(this.textBox2_passwordconfirm_TextChanged);
+            this.textBox2_passwordconfirm.TextChanged += new System.EventHandler(this.textBox2_passwordconfirm_TextChanged);
             // 
             // button1register_user
             // 
@@ -97,6 +105,7 @@
             this.button1register_user.TabIndex = 7;
             this.button1register_user.Text = "REGISTER";
             this.button1register_user.UseVisualStyleBackColor = true;
+            this.button1register_user.Click += new System.EventHandler(this.button1register_user_Click);
             // 
             // button1back_user
             // 
@@ -106,6 +115,7 @@
             this.button1back_user.TabIndex = 8;
             this.button1back_user.Text = "BACK";
             this.button1back_user.UseVisualStyleBackColor = true;
+            this.button1back_user.Click += new System.EventHandler(this.button1back_user_Click);
             // 
             // UserRegistrationForm
             // 
@@ -119,7 +129,7 @@
             this.Controls.Add(this.textBox1username);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.usernamelabel);
             this.Name = "UserRegistrationForm";
             this.Text = "userRegisterForm";
             this.ResumeLayout(false);
@@ -129,7 +139,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label username;
+        private System.Windows.Forms.Label usernamelabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1username;

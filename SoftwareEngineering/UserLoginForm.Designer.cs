@@ -62,13 +62,16 @@
             this.textBox1username_user.Name = "textBox1username_user";
             this.textBox1username_user.Size = new System.Drawing.Size(235, 26);
             this.textBox1username_user.TabIndex = 3;
+            this.textBox1username_user.TextChanged += new System.EventHandler(this.textBox1username_user_TextChanged);
             // 
             // textBox1userpassword
             // 
             this.textBox1userpassword.Location = new System.Drawing.Point(386, 194);
             this.textBox1userpassword.Name = "textBox1userpassword";
+            this.textBox1userpassword.PasswordChar = '*';
             this.textBox1userpassword.Size = new System.Drawing.Size(235, 26);
             this.textBox1userpassword.TabIndex = 4;
+            this.textBox1userpassword.TextChanged += new System.EventHandler(this.textBox1userpassword_TextChanged);
             // 
             // loginbutton1_user
             // 
@@ -78,6 +81,7 @@
             this.loginbutton1_user.TabIndex = 5;
             this.loginbutton1_user.Text = "LOGIN";
             this.loginbutton1_user.UseVisualStyleBackColor = true;
+            this.loginbutton1_user.Click += new System.EventHandler(this.loginbutton1_user_Click);
             // 
             // button2register_user
             // 
@@ -87,6 +91,7 @@
             this.button2register_user.TabIndex = 6;
             this.button2register_user.Text = "REGISTER";
             this.button2register_user.UseVisualStyleBackColor = true;
+            this.button2register_user.Click += new System.EventHandler(this.button2register_user_Click);
             // 
             // UserLoginForm
             // 

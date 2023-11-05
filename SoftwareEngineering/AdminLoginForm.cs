@@ -46,5 +46,10 @@ namespace SoftwareEngineering
         {
 
         }
+
+        private void AdminLoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

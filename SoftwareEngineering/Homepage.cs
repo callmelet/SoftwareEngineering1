@@ -14,8 +14,9 @@ namespace SoftwareEngineering
     public partial class Homepage : Form
     {
         private SqlConnection connection;
-        private string connectionString = "Server=BOOK-5A3M5LR9FE;Database=VendorApplication;Integrated Security=True;";
-        
+        private string connectionString = "Data Source=BOOK-5A3M5LR9FE;Network Library=dbmssocn;Initial Catalog=VendorApplication;Integrated Security=True";
+
+
         public Homepage()
         {
             InitializeComponent();
@@ -54,38 +55,38 @@ namespace SoftwareEngineering
                 adminLoginForm.Show();
             }
 
-            //code for login page for user and admin
-            string username = "user123"; // Replace with the username entered by the user
-            string password = "hashedpassword123"; // Replace with the hashed password entered by the user
+            ////code for login page for user and admin
+            //string username = "user123"; // Replace with the username entered by the user
+            //string password = "hashedpassword123"; // Replace with the hashed password entered by the user
 
-            using (connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
+            //using (connection = new SqlConnection(connectionString))
+            //{
+            //    connection.Open();
 
-                // Query to retrieve UserType from your database
-                string query = "SELECT UserType FROM dbo.user_table WHERE Username = @Username AND Password = @Password";
+            //    // Query to retrieve UserType from your database
+            //    string query = "SELECT UserType FROM dbo.user_table WHERE Username = @Username AND Password = @Password";
 
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password);
+            //    using (SqlCommand command = new SqlCommand(query, connection))
+            //    {
+            //        command.Parameters.AddWithValue("@Username", username);
+            //        command.Parameters.AddWithValue("@Password", password);
 
-                    string userType = (string)command.ExecuteScalar();
+            //        string userType = (string)command.ExecuteScalar();
 
-                    if (userType == "User")
-                    {
-                        // The user is a regular user
-                        // Open the user-specific form or perform user-related actions
-                    }
-                    else if (userType == "Admin")
-                    {
-                        // The user is an admin
-                        // Open the admin-specific form or perform admin-related actions
-                    }
-                }
+            //        if (userType == "User")
+            //        {
+            //            // The user is a regular user
+            //            // Open the user-specific form or perform user-related actions
+            //        }
+            //        else if (userType == "Admin")
+            //        {
+            //            // The user is an admin
+            //            // Open the admin-specific form or perform admin-related actions
+            //        }
+            //    }
 
-                connection.Close();
-            }
+            //    connection.Close();
+            //}
 
         }
 
@@ -105,38 +106,38 @@ namespace SoftwareEngineering
                 adminRegistrationForm.Show();
             }
 
-            //code for registration page for user and admin
-            string username = "user123"; // Replace with the username entered by the user during registration
-            string password = "hashedpassword123"; // Replace with the hashed password entered by the user during registration
-            string userType = radioButtonUSER.Checked ? "User" : "Admin"; // Determine the user's role based on the radio button selection
+            ////code for registration page for user and admin
+            //string username = "user123"; // Replace with the username entered by the user during registration
+            //string password = "hashedpassword123"; // Replace with the hashed password entered by the user during registration
+            //string userType = radioButtonUSER.Checked ? "User" : "Admin"; // Determine the user's role based on the radio button selection
 
-            using (connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
+            //using (connection = new SqlConnection(connectionString))
+            //{
+            //    connection.Open();
 
-                // Query to insert a new user or admin into your database
-                string query = "INSERT INTO " + (userType == "User" ? "dbo.user_table" : "dbo.admin_table") + " (Username, Password, UserType) VALUES (@Username, @Password, @UserType)";
+            //    // Query to insert a new user or admin into your database
+            //    string query = "INSERT INTO " + (userType == "User" ? "dbo.user_table" : "dbo.admin_table") + " (Username, Password, UserType) VALUES (@Username, @Password, @UserType)";
 
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password);
-                    command.Parameters.AddWithValue("@UserType", userType);
+            //    using (SqlCommand command = new SqlCommand(query, connection))
+            //    {
+            //        command.Parameters.AddWithValue("@Username", username);
+            //        command.Parameters.AddWithValue("@Password", password);
+            //        command.Parameters.AddWithValue("@UserType", userType);
 
-                    int rowsAffected = command.ExecuteNonQuery();
+            //        int rowsAffected = command.ExecuteNonQuery();
 
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Registration successful!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Registration failed. Please try again.");
-                    }
-                }
+            //        if (rowsAffected > 0)
+            //        {
+            //            MessageBox.Show("Registration successful!");
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Registration failed. Please try again.");
+            //        }
+            //    }
 
-                connection.Close();
-            }
+            //    connection.Close();
+            //}
 
 
 

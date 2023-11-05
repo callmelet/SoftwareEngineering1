@@ -70,6 +70,7 @@
             // 
             this.textBox2password.Location = new System.Drawing.Point(399, 182);
             this.textBox2password.Name = "textBox2password";
+            this.textBox2password.PasswordChar = '*';
             this.textBox2password.Size = new System.Drawing.Size(235, 26);
             this.textBox2password.TabIndex = 3;
             this.textBox2password.TextChanged += new System.EventHandler(this.textBox2password_TextChanged);
@@ -107,6 +108,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AdminLoginForm";
             this.Text = "AdminLoginForm";
+            this.Load += new System.EventHandler(this.AdminLoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
