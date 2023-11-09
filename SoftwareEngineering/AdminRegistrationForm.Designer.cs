@@ -28,105 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.adminusername = new System.Windows.Forms.Label();
+            this.usernamelabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.confirmadminpassword = new System.Windows.Forms.Label();
-            this.textBox1adminusername = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1register = new System.Windows.Forms.Button();
-            this.button2back = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1username = new System.Windows.Forms.TextBox();
+            this.textBox1_password = new System.Windows.Forms.TextBox();
+            this.textBox2_passwordconfirm = new System.Windows.Forms.TextBox();
+            this.button1register_admin = new System.Windows.Forms.Button();
+            this.button1back_admin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // adminusername
+            // usernamelabel
             // 
-            this.adminusername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adminusername.Location = new System.Drawing.Point(152, 90);
-            this.adminusername.Name = "adminusername";
-            this.adminusername.Size = new System.Drawing.Size(209, 35);
-            this.adminusername.TabIndex = 0;
-            this.adminusername.Text = "Admin Username";
-            this.adminusername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usernamelabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usernamelabel.Location = new System.Drawing.Point(142, 85);
+            this.usernamelabel.Name = "usernamelabel";
+            this.usernamelabel.Size = new System.Drawing.Size(209, 35);
+            this.usernamelabel.TabIndex = 2;
+            this.usernamelabel.Text = "Username";
+            this.usernamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(152, 166);
+            this.label1.Location = new System.Drawing.Point(142, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Admin Password";
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Create Password";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // confirmadminpassword
+            // label2
             // 
-            this.confirmadminpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.confirmadminpassword.Location = new System.Drawing.Point(152, 244);
-            this.confirmadminpassword.Name = "confirmadminpassword";
-            this.confirmadminpassword.Size = new System.Drawing.Size(209, 35);
-            this.confirmadminpassword.TabIndex = 2;
-            this.confirmadminpassword.Text = "Confirm Admin Password\r\n";
-            this.confirmadminpassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(142, 238);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(209, 35);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Confirm Password";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1adminusername
+            // textBox1username
             // 
-            this.textBox1adminusername.Location = new System.Drawing.Point(455, 94);
-            this.textBox1adminusername.Name = "textBox1adminusername";
-            this.textBox1adminusername.Size = new System.Drawing.Size(221, 26);
-            this.textBox1adminusername.TabIndex = 3;
+            this.textBox1username.Location = new System.Drawing.Point(387, 89);
+            this.textBox1username.Name = "textBox1username";
+            this.textBox1username.Size = new System.Drawing.Size(221, 26);
+            this.textBox1username.TabIndex = 5;
             // 
-            // textBox1
+            // textBox1_password
             // 
-            this.textBox1.Location = new System.Drawing.Point(455, 170);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(221, 26);
-            this.textBox1.TabIndex = 4;
+            this.textBox1_password.Location = new System.Drawing.Point(387, 168);
+            this.textBox1_password.Name = "textBox1_password";
+            this.textBox1_password.PasswordChar = '*';
+            this.textBox1_password.Size = new System.Drawing.Size(221, 26);
+            this.textBox1_password.TabIndex = 6;
             // 
-            // textBox2
+            // textBox2_passwordconfirm
             // 
-            this.textBox2.Location = new System.Drawing.Point(455, 248);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(221, 26);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2_passwordconfirm.Location = new System.Drawing.Point(387, 242);
+            this.textBox2_passwordconfirm.Name = "textBox2_passwordconfirm";
+            this.textBox2_passwordconfirm.PasswordChar = '*';
+            this.textBox2_passwordconfirm.Size = new System.Drawing.Size(221, 26);
+            this.textBox2_passwordconfirm.TabIndex = 7;
             // 
-            // button1register
+            // button1register_admin
             // 
-            this.button1register.Location = new System.Drawing.Point(266, 331);
-            this.button1register.Name = "button1register";
-            this.button1register.Size = new System.Drawing.Size(140, 39);
-            this.button1register.TabIndex = 6;
-            this.button1register.Text = "REGISTER";
-            this.button1register.UseVisualStyleBackColor = true;
-            this.button1register.Click += new System.EventHandler(this.button1_Click);
+            this.button1register_admin.Location = new System.Drawing.Point(230, 320);
+            this.button1register_admin.Name = "button1register_admin";
+            this.button1register_admin.Size = new System.Drawing.Size(140, 39);
+            this.button1register_admin.TabIndex = 8;
+            this.button1register_admin.Text = "REGISTER";
+            this.button1register_admin.UseVisualStyleBackColor = true;
+            this.button1register_admin.Click += new System.EventHandler(this.button1register_admin_Click);
             // 
-            // button2back
+            // button1back_admin
             // 
-            this.button2back.Location = new System.Drawing.Point(434, 331);
-            this.button2back.Name = "button2back";
-            this.button2back.Size = new System.Drawing.Size(140, 39);
-            this.button2back.TabIndex = 7;
-            this.button2back.Text = "BACK";
-            this.button2back.UseVisualStyleBackColor = true;
-            this.button2back.Click += new System.EventHandler(this.button2back_Click);
+            this.button1back_admin.Location = new System.Drawing.Point(387, 320);
+            this.button1back_admin.Name = "button1back_admin";
+            this.button1back_admin.Size = new System.Drawing.Size(140, 39);
+            this.button1back_admin.TabIndex = 9;
+            this.button1back_admin.Text = "BACK";
+            this.button1back_admin.UseVisualStyleBackColor = true;
+            this.button1back_admin.Click += new System.EventHandler(this.button1back_user_Click);
             // 
             // AdminRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2back);
-            this.Controls.Add(this.button1register);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox1adminusername);
-            this.Controls.Add(this.confirmadminpassword);
+            this.ClientSize = new System.Drawing.Size(715, 417);
+            this.Controls.Add(this.button1back_admin);
+            this.Controls.Add(this.button1register_admin);
+            this.Controls.Add(this.textBox2_passwordconfirm);
+            this.Controls.Add(this.textBox1_password);
+            this.Controls.Add(this.textBox1username);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.adminusername);
+            this.Controls.Add(this.usernamelabel);
             this.Name = "AdminRegistrationForm";
-            this.Text = "adminRegisterForm";
+            this.Text = "AdminRegistrationForm";
+            this.Load += new System.EventHandler(this.AdminRegistrationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,13 +134,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label adminusername;
+        private System.Windows.Forms.Label usernamelabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label confirmadminpassword;
-        private System.Windows.Forms.TextBox textBox1adminusername;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1register;
-        private System.Windows.Forms.Button button2back;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1username;
+        private System.Windows.Forms.TextBox textBox1_password;
+        private System.Windows.Forms.TextBox textBox2_passwordconfirm;
+        private System.Windows.Forms.Button button1register_admin;
+        private System.Windows.Forms.Button button1back_admin;
     }
 }

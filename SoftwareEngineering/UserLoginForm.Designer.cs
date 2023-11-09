@@ -33,7 +33,6 @@
             this.textBox1username_user = new System.Windows.Forms.TextBox();
             this.textBox1userpassword = new System.Windows.Forms.TextBox();
             this.loginbutton1_user = new System.Windows.Forms.Button();
-            this.button2register_user = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +74,7 @@
             // 
             // loginbutton1_user
             // 
-            this.loginbutton1_user.Location = new System.Drawing.Point(240, 301);
+            this.loginbutton1_user.Location = new System.Drawing.Point(306, 283);
             this.loginbutton1_user.Name = "loginbutton1_user";
             this.loginbutton1_user.Size = new System.Drawing.Size(149, 34);
             this.loginbutton1_user.TabIndex = 5;
@@ -83,22 +82,11 @@
             this.loginbutton1_user.UseVisualStyleBackColor = true;
             this.loginbutton1_user.Click += new System.EventHandler(this.loginbutton1_user_Click);
             // 
-            // button2register_user
-            // 
-            this.button2register_user.Location = new System.Drawing.Point(421, 301);
-            this.button2register_user.Name = "button2register_user";
-            this.button2register_user.Size = new System.Drawing.Size(149, 34);
-            this.button2register_user.TabIndex = 6;
-            this.button2register_user.Text = "REGISTER";
-            this.button2register_user.UseVisualStyleBackColor = true;
-            this.button2register_user.Click += new System.EventHandler(this.button2register_user_Click);
-            // 
             // UserLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2register_user);
             this.Controls.Add(this.loginbutton1_user);
             this.Controls.Add(this.textBox1userpassword);
             this.Controls.Add(this.textBox1username_user);
@@ -118,6 +106,5 @@
         private System.Windows.Forms.TextBox textBox1username_user;
         private System.Windows.Forms.TextBox textBox1userpassword;
         private System.Windows.Forms.Button loginbutton1_user;
-        private System.Windows.Forms.Button button2register_user;
     }
 }

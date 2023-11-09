@@ -57,14 +57,14 @@ namespace SoftwareEngineering
                 return;
             }
 
-            // Check if the user is already registered (you would typically query your database here)
+            // Check if the user is already registered
             if (isUserRegistered)
             {
                 MessageBox.Show("User has already been registered. Please log in.");
             }
             else
             {
-                // Implement registration logic here by inserting the user into the database
+                // Implement registration logic by inserting the user into the database
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();

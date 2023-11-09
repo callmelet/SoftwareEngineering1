@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +65,12 @@
     <Compile Include="Homepage.Designer.cs">
       <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Homepage1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage1.Designer.cs">
+      <DependentUpon>Homepage1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserLoginForm.cs">
@@ -71,6 +78,12 @@
     </Compile>
     <Compile Include="UserLoginForm.Designer.cs">
       <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Userpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Userpage.Designer.cs">
+      <DependentUpon>Userpage.cs</DependentUpon>
     </Compile>
     <Compile Include="UserRegistrationForm.cs">
       <SubType>Form</SubType>
@@ -87,6 +100,9 @@
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Homepage1.resx">
+      <DependentUpon>Homepage1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,6 +114,9 @@
     </Compile>
     <EmbeddedResource Include="UserLoginForm.resx">
       <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Userpage.resx">
+      <DependentUpon>Userpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserRegistrationForm.resx">
       <DependentUpon>UserRegistrationForm.cs</DependentUpon>

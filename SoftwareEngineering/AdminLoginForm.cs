@@ -42,11 +42,7 @@ namespace SoftwareEngineering
 
         }
 
-        private void registerbutton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void AdminLoginForm_Load(object sender, EventArgs e)
         {
 
