@@ -67,6 +67,10 @@ namespace SoftwareEngineering
                             {
                                 // Password matches; login successful
                                 MessageBox.Show("Login successful. Welcome, user!");
+
+                                // Open the Userpage form
+                                Userpage userPage = new Userpage();
+                                userPage.Show();
                             }
                             else
                             {
@@ -83,9 +87,10 @@ namespace SoftwareEngineering
                 }
             }
         }
-    
 
+        private void UserLoginForm_Load(object sender, EventArgs e)
+        {
 
-
-}
+        }
+    }
 }

@@ -31,9 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.userprofilebutton = new System.Windows.Forms.Button();
             this.userclientsbutton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.usersearchbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.searchbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,34 +74,43 @@
             this.userclientsbutton.TabIndex = 1;
             this.userclientsbutton.Text = "YOUR CLIENTS";
             this.userclientsbutton.UseVisualStyleBackColor = true;
+            this.userclientsbutton.Click += new System.EventHandler(this.userclientsbutton_Click);
             // 
-            // textBox1
+            // usersearchbox
             // 
-            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox1.Location = new System.Drawing.Point(7, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(427, 26);
-            this.textBox1.TabIndex = 1;
+            this.usersearchbox.AutoCompleteCustomSource.AddRange(new string[] {
+            "Tax Planning ",
+            "Budgeting",
+            "Financial Consultation",
+            "Investment Planning ",
+            "Debt Management "});
+            this.usersearchbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.usersearchbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.usersearchbox.Location = new System.Drawing.Point(7, 70);
+            this.usersearchbox.Name = "usersearchbox";
+            this.usersearchbox.Size = new System.Drawing.Size(427, 26);
+            this.usersearchbox.TabIndex = 1;
+            this.usersearchbox.TextChanged += new System.EventHandler(this.usersearchbox_TextChanged);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.searchbutton);
+            this.panel2.Controls.Add(this.usersearchbox);
             this.panel2.Location = new System.Drawing.Point(241, -1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(560, 123);
             this.panel2.TabIndex = 2;
             // 
-            // button1
+            // searchbutton
             // 
-            this.button1.Location = new System.Drawing.Point(450, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 26);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.searchbutton.Location = new System.Drawing.Point(440, 65);
+            this.searchbutton.Name = "searchbutton";
+            this.searchbutton.Size = new System.Drawing.Size(107, 37);
+            this.searchbutton.TabIndex = 2;
+            this.searchbutton.Text = "SEARCH";
+            this.searchbutton.UseVisualStyleBackColor = true;
+            this.searchbutton.Click += new System.EventHandler(this.searchbutton_Click);
             // 
             // label1
             // 
@@ -109,13 +118,15 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(479, 40);
             this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.label1.Text = "What solutions are you looking for? Type here to start";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Userpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 447);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Userpage";
@@ -132,9 +143,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button userprofilebutton;
         private System.Windows.Forms.Button userclientsbutton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox usersearchbox;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button searchbutton;
         private System.Windows.Forms.Label label1;
     }
 }

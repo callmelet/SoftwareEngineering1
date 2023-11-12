@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userclients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userclients.Designer.cs">
+      <DependentUpon>userclients.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="Userpage.Designer.cs">
       <DependentUpon>Userpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userprofile.Designer.cs">
+      <DependentUpon>userprofile.cs</DependentUpon>
     </Compile>
     <Compile Include="UserRegistrationForm.cs">
       <SubType>Form</SubType>
@@ -112,11 +124,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="userclients.resx">
+      <DependentUpon>userclients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserLoginForm.resx">
       <DependentUpon>UserLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Userpage.resx">
       <DependentUpon>Userpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userprofile.resx">
+      <DependentUpon>userprofile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserRegistrationForm.resx">
       <DependentUpon>UserRegistrationForm.cs</DependentUpon>
