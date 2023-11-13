@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace SoftwareEngineering
 {
-    public partial class userprofile : Form
+    public partial class BudgetingForm : Form
     {
-        public userprofile()
+        public BudgetingForm()
         {
             InitializeComponent();
         }
 
-        private void userprofile_Load(object sender, EventArgs e)
+        private void Budgeting_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

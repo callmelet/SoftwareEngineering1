@@ -81,7 +81,7 @@
             this.usersearchbox.AutoCompleteCustomSource.AddRange(new string[] {
             "Tax Planning ",
             "Budgeting",
-            "Financial Consultation",
+            "Financial Analysis",
             "Investment Planning ",
             "Debt Management "});
             this.usersearchbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;

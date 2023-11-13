@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SoftwareEngineering
-{
+{   
+
     public partial class Userpage : Form
     {
         private AutoCompleteStringCollection suggestionList;
@@ -31,12 +32,14 @@ namespace SoftwareEngineering
         private void PopulateSuggestionList()
         {
             try
-            {
-                if (InvokeRequired)
-                {
-                    Invoke(new Action(() => PopulateSuggestionList()));
-                    return;
-                }
+            {   
+                ////dont know if needed
+                //if (InvokeRequired)
+                //{
+                //    Invoke(new Action(() => PopulateSuggestionList()));
+                //    return;
+                //}
+
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -75,9 +78,43 @@ namespace SoftwareEngineering
         }
 
         private void searchbutton_Click(object sender, EventArgs e)
-        {
-
+        {   
+            //newly added
+            string selectedSolution = usersearchbox.Text;
+            NavigateToSolution(selectedSolution);
         }
+
+        //newly added
+        private void NavigateToSolution(string solutionName)
+        {
+            switch (solutionName)
+            {
+                case "Investment Planning":
+                    InvestmentPlanningForm investmentPlanningForm = new InvestmentPlanningForm();
+                    investmentPlanningForm.Show();
+                    break;
+                case "Budgeting":
+                    BudgetingForm budgetingForm = new BudgetingForm();
+                    budgetingForm.Show();
+                    break;
+                case "Tax Planning":
+                    TaxPlanningForm taxPlanningForm = new TaxPlanningForm();
+                    taxPlanningForm.Show();
+                    break;
+                case "Financial Analysis":
+                    FinancialAnalysisForm financialAnalysisForm = new FinancialAnalysisForm();
+                    financialAnalysisForm.Show();
+                    break;
+                case "Debt Management":
+                    DebtManagementForm debtManagementForm = new DebtManagementForm();
+                    debtManagementForm.Show();
+                    break;
+                default:
+                    MessageBox.Show("The solution you are looking for does not exist. Please check the name and try again.");
+                    break;
+            }
+        }
+
 
         private void userclientsbutton_Click(object sender, EventArgs e)
         {

@@ -59,6 +59,24 @@
     <Compile Include="AdminRegistrationForm.Designer.cs">
       <DependentUpon>AdminRegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Budgeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Budgeting.Designer.cs">
+      <DependentUpon>Budgeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtManagement.Designer.cs">
+      <DependentUpon>DebtManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinancialAnalysis.Designer.cs">
+      <DependentUpon>FinancialAnalysis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,8 +89,20 @@
     <Compile Include="Homepage1.Designer.cs">
       <DependentUpon>Homepage1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvestmentPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvestmentPlanning.Designer.cs">
+      <DependentUpon>InvestmentPlanning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaxPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxPlanning.Designer.cs">
+      <DependentUpon>TaxPlanning.cs</DependentUpon>
+    </Compile>
     <Compile Include="userclients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,11 +139,23 @@
     <EmbeddedResource Include="AdminRegistrationForm.resx">
       <DependentUpon>AdminRegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Budgeting.resx">
+      <DependentUpon>Budgeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtManagement.resx">
+      <DependentUpon>DebtManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinancialAnalysis.resx">
+      <DependentUpon>FinancialAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage1.resx">
       <DependentUpon>Homepage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvestmentPlanning.resx">
+      <DependentUpon>InvestmentPlanning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +166,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TaxPlanning.resx">
+      <DependentUpon>TaxPlanning.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userclients.resx">
       <DependentUpon>userclients.cs</DependentUpon>
     </EmbeddedResource>

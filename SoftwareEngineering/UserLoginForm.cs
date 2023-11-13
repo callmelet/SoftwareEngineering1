@@ -49,9 +49,18 @@ namespace SoftwareEngineering
 
                 using (SqlCommand checkUserCommand = new SqlCommand(checkUserQuery, connection))
                 {
+                    bool isUser = false;
                     checkUserCommand.Parameters.AddWithValue("@Username", username);
 
-                    bool isUser = (bool)checkUserCommand.ExecuteScalar();
+                    var userdetails = checkUserCommand.ExecuteScalar();
+                    if (userdetails != null)
+                    {
+                        isUser = (bool)userdetails;
+                    }
+
+                 
+                    //bool isUser = (bool)checkUserCommand.ExecuteScalar();
+
 
                     if (isUser)
                     {
