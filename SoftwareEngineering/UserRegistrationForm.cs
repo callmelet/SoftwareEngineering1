@@ -117,5 +117,10 @@ namespace SoftwareEngineering
             this.Close(); // Close the registration form
 
         }
+
+        private void UserRegistrationForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

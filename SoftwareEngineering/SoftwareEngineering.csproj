@@ -95,6 +95,7 @@
     <Compile Include="InvestmentPlanning.Designer.cs">
       <DependentUpon>InvestmentPlanning.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaxPlanning.cs">

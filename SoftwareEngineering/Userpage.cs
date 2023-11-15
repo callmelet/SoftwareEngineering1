@@ -20,45 +20,56 @@ namespace SoftwareEngineering
         public Userpage()
         {
             InitializeComponent();
-            InitializeComponent();
+            InitializeAutoComplete();
+        }
+
+        private void InitializeAutoComplete()
+        {
             suggestionList = new AutoCompleteStringCollection();
             PopulateSuggestionList();
             usersearchbox.AutoCompleteCustomSource = suggestionList;
-            usersearchbox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;  // Set to SuggestAppend
+            usersearchbox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             usersearchbox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
         }
+
 
         private void PopulateSuggestionList()
         {
             try
-            {   
-                ////dont know if needed
-                //if (InvokeRequired)
-                //{
-                //    Invoke(new Action(() => PopulateSuggestionList()));
-                //    return;
-                //}
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string query = "SELECT SolutionName FROM Solutions";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        SqlDataReader reader = command.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            suggestionList.Add(reader["SolutionName"].ToString());
-                        }
-                    }
-                }
+            {
+                List<string> solutionNames = GetDataFromDatabase();
+                suggestionList.AddRange(solutionNames.ToArray());
             }
             catch (Exception ex)
             {   
                 MessageBox.Show($"An error occurred while fetching suggestions: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+        private List<string> GetDataFromDatabase()
+        {
+            List<string> solutionNames = new List<string>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT SolutionName FROM Solutions";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        solutionNames.Add(reader["SolutionName"].ToString());
+                    }
+                }
+            }
+
+            return solutionNames;
+        }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

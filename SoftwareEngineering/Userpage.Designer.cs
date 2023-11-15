@@ -56,7 +56,7 @@
             // 
             this.userprofilebutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.userprofilebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userprofilebutton.Location = new System.Drawing.Point(35, 131);
+            this.userprofilebutton.Location = new System.Drawing.Point(35, 133);
             this.userprofilebutton.Name = "userprofilebutton";
             this.userprofilebutton.Size = new System.Drawing.Size(161, 35);
             this.userprofilebutton.TabIndex = 0;

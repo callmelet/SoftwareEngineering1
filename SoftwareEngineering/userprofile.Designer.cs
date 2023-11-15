@@ -32,6 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBoxname = new System.Windows.Forms.TextBox();
+            this.textBoxsurname = new System.Windows.Forms.TextBox();
+            this.textBoxemail = new System.Windows.Forms.TextBox();
+            this.textBoxphone = new System.Windows.Forms.TextBox();
+            this.btnsavename = new System.Windows.Forms.Button();
+            this.btnsavesurname = new System.Windows.Forms.Button();
+            this.btnsaveemail = new System.Windows.Forms.Button();
+            this.btnsavephone = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,11 +90,99 @@
             this.label4.Text = "PHONE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBoxname
+            // 
+            this.textBoxname.Location = new System.Drawing.Point(325, 79);
+            this.textBoxname.Name = "textBoxname";
+            this.textBoxname.Size = new System.Drawing.Size(351, 26);
+            this.textBoxname.TabIndex = 4;
+            this.textBoxname.TextChanged += new System.EventHandler(this.textBoxname_TextChanged);
+            // 
+            // textBoxsurname
+            // 
+            this.textBoxsurname.Location = new System.Drawing.Point(325, 158);
+            this.textBoxsurname.Name = "textBoxsurname";
+            this.textBoxsurname.Size = new System.Drawing.Size(351, 26);
+            this.textBoxsurname.TabIndex = 5;
+            this.textBoxsurname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBoxemail
+            // 
+            this.textBoxemail.Location = new System.Drawing.Point(325, 239);
+            this.textBoxemail.Name = "textBoxemail";
+            this.textBoxemail.Size = new System.Drawing.Size(351, 26);
+            this.textBoxemail.TabIndex = 6;
+            this.textBoxemail.TextChanged += new System.EventHandler(this.textBoxemail_TextChanged);
+            // 
+            // textBoxphone
+            // 
+            this.textBoxphone.Location = new System.Drawing.Point(325, 325);
+            this.textBoxphone.Name = "textBoxphone";
+            this.textBoxphone.Size = new System.Drawing.Size(351, 26);
+            this.textBoxphone.TabIndex = 7;
+            this.textBoxphone.TextChanged += new System.EventHandler(this.textBoxphone_TextChanged);
+            // 
+            // btnsavename
+            // 
+            this.btnsavename.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnsavename.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsavename.Location = new System.Drawing.Point(713, 72);
+            this.btnsavename.Name = "btnsavename";
+            this.btnsavename.Size = new System.Drawing.Size(102, 37);
+            this.btnsavename.TabIndex = 8;
+            this.btnsavename.Text = "SAVE";
+            this.btnsavename.UseVisualStyleBackColor = false;
+            this.btnsavename.Click += new System.EventHandler(this.btnsavename_Click);
+            // 
+            // btnsavesurname
+            // 
+            this.btnsavesurname.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnsavesurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsavesurname.Location = new System.Drawing.Point(713, 151);
+            this.btnsavesurname.Name = "btnsavesurname";
+            this.btnsavesurname.Size = new System.Drawing.Size(102, 37);
+            this.btnsavesurname.TabIndex = 9;
+            this.btnsavesurname.Text = "SAVE";
+            this.btnsavesurname.UseVisualStyleBackColor = false;
+            this.btnsavesurname.Click += new System.EventHandler(this.btnsavesurname_Click);
+            // 
+            // btnsaveemail
+            // 
+            this.btnsaveemail.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnsaveemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsaveemail.Location = new System.Drawing.Point(713, 232);
+            this.btnsaveemail.Name = "btnsaveemail";
+            this.btnsaveemail.Size = new System.Drawing.Size(102, 37);
+            this.btnsaveemail.TabIndex = 10;
+            this.btnsaveemail.Text = "SAVE";
+            this.btnsaveemail.UseVisualStyleBackColor = false;
+            this.btnsaveemail.Click += new System.EventHandler(this.btnsaveemail_Click);
+            // 
+            // btnsavephone
+            // 
+            this.btnsavephone.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnsavephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsavephone.Location = new System.Drawing.Point(713, 318);
+            this.btnsavephone.Name = "btnsavephone";
+            this.btnsavephone.Size = new System.Drawing.Size(102, 37);
+            this.btnsavephone.TabIndex = 11;
+            this.btnsavephone.Text = "SAVE";
+            this.btnsavephone.UseVisualStyleBackColor = false;
+            this.btnsavephone.Click += new System.EventHandler(this.btnsavephone_Click);
+            // 
             // userprofile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(895, 464);
+            this.Controls.Add(this.btnsavephone);
+            this.Controls.Add(this.btnsaveemail);
+            this.Controls.Add(this.btnsavesurname);
+            this.Controls.Add(this.btnsavename);
+            this.Controls.Add(this.textBoxphone);
+            this.Controls.Add(this.textBoxemail);
+            this.Controls.Add(this.textBoxsurname);
+            this.Controls.Add(this.textBoxname);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -95,6 +191,7 @@
             this.Text = "userprofile";
             this.Load += new System.EventHandler(this.userprofile_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,5 +201,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxname;
+        private System.Windows.Forms.TextBox textBoxsurname;
+        private System.Windows.Forms.TextBox textBoxemail;
+        private System.Windows.Forms.TextBox textBoxphone;
+        private System.Windows.Forms.Button btnsavename;
+        private System.Windows.Forms.Button btnsavesurname;
+        private System.Windows.Forms.Button btnsaveemail;
+        private System.Windows.Forms.Button btnsavephone;
     }
 }

@@ -76,6 +76,7 @@ namespace SoftwareEngineering
                             {
                                 // Password matches; login successful
                                 MessageBox.Show("Login successful. Welcome, user!");
+                                LoginInfo.UserName = username;
 
                                 // Open the Userpage form
                                 Userpage userPage = new Userpage();

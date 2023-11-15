@@ -21,5 +21,10 @@ namespace SoftwareEngineering
         {
 
         }
+
+        private void addNewClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
