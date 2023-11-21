@@ -106,40 +106,6 @@ namespace SoftwareEngineering
                 adminRegistrationForm.Show();
             }
 
-            ////code for registration page for user and admin
-            //string username = "user123"; // Replace with the username entered by the user during registration
-            //string password = "hashedpassword123"; // Replace with the hashed password entered by the user during registration
-            //string userType = radioButtonUSER.Checked ? "User" : "Admin"; // Determine the user's role based on the radio button selection
-
-            //using (connection = new SqlConnection(connectionString))
-            //{
-            //    connection.Open();
-
-            //    // Query to insert a new user or admin into your database
-            //    string query = "INSERT INTO " + (userType == "User" ? "dbo.user_table" : "dbo.admin_table") + " (Username, Password, UserType) VALUES (@Username, @Password, @UserType)";
-
-            //    using (SqlCommand command = new SqlCommand(query, connection))
-            //    {
-            //        command.Parameters.AddWithValue("@Username", username);
-            //        command.Parameters.AddWithValue("@Password", password);
-            //        command.Parameters.AddWithValue("@UserType", userType);
-
-            //        int rowsAffected = command.ExecuteNonQuery();
-
-            //        if (rowsAffected > 0)
-            //        {
-            //            MessageBox.Show("Registration successful!");
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Registration failed. Please try again.");
-            //        }
-            //    }
-
-            //    connection.Close();
-            //}
-
-
 
         }
     }

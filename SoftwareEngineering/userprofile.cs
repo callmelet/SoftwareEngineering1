@@ -37,14 +37,7 @@ namespace SoftwareEngineering
 
         private void btnviewprofile_Click(object sender, EventArgs e)
         {
-            //// Assuming 'viewuserprofile' is the name of your viewuserprofile form
-            //viewuserprofile userProfileForm = new viewuserprofile();
-
-            //// Show the viewuserprofile form
-            //userProfileForm.Show();
-
-            //// Close the current form
-            //this.Close();
+            
         }
 
         // this is the textbox for surname
@@ -90,7 +83,7 @@ namespace SoftwareEngineering
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Data saved successfully!");
-                        // Now, retrieve the updated data from the database and display in the textbox
+                        // retrieve the updated data from the database and display in the textbox
                         string retrieveQuery = "SELECT Name FROM [user_table] WHERE Username = @Username";
                         using (SqlCommand retrieveCommand = new SqlCommand(retrieveQuery, connection))
                         {
@@ -202,7 +195,7 @@ namespace SoftwareEngineering
                     {
                         MessageBox.Show("Data saved successfully!");
 
-                        // Now, retrieve the updated data from the database and display in the textbox
+                        // retrieve the updated data from the database and display in the textbox
                         string retrieveQuery = "SELECT Email FROM [user_table] WHERE Username = @Username";
                         using (SqlCommand retrieveCommand = new SqlCommand(retrieveQuery, connection))
                         {
@@ -255,13 +248,13 @@ namespace SoftwareEngineering
                     // Execute the query
                     int rowsAffected = command.ExecuteNonQuery();
 
-                    // Check if the insertion was successful
+                    // Checks if the insertion was successful
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Data saved successfully!");
 
 
-                        // Now, retrieve the updated data from the database and display in the textbox
+                        //retrieve the updated data from the database and display in the textbox
                         string retrieveQuery = "SELECT Phone FROM [user_table] WHERE Username = @Username";
                         using (SqlCommand retrieveCommand = new SqlCommand(retrieveQuery, connection))
                         {

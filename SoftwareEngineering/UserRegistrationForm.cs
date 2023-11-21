@@ -114,7 +114,7 @@ namespace SoftwareEngineering
         {
 
             // Navigate back to the login form or close the registration form
-            this.Close(); // Close the registration form
+            this.Hide(); // Close the registration form
 
         }
 

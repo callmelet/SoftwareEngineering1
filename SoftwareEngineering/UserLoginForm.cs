@@ -81,6 +81,7 @@ namespace SoftwareEngineering
                                 // Open the Userpage form
                                 Userpage userPage = new Userpage();
                                 userPage.Show();
+                                
                             }
                             else
                             {

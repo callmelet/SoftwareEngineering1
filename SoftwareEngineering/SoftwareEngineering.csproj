@@ -65,6 +65,12 @@
     <Compile Include="Budgeting.Designer.cs">
       <DependentUpon>Budgeting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Client1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client1.Designer.cs">
+      <DependentUpon>Client1.cs</DependentUpon>
+    </Compile>
     <Compile Include="DebtManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,16 @@
     <Compile Include="UserRegistrationForm.Designer.cs">
       <DependentUpon>UserRegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VendorApplicationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VendorApplicationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VendorApplicationDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VendorApplicationDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Budgeting.resx">
       <DependentUpon>Budgeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client1.resx">
+      <DependentUpon>Client1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DebtManagement.resx">
       <DependentUpon>DebtManagement.cs</DependentUpon>
@@ -194,6 +213,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VendorApplicationDataSet.xsc">
+      <DependentUpon>VendorApplicationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VendorApplicationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VendorApplicationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VendorApplicationDataSet.xss">
+      <DependentUpon>VendorApplicationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VendorApplicationDataSet1.xsc">
+      <DependentUpon>VendorApplicationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VendorApplicationDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VendorApplicationDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VendorApplicationDataSet1.xss">
+      <DependentUpon>VendorApplicationDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

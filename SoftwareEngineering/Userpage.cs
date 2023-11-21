@@ -132,6 +132,7 @@ namespace SoftwareEngineering
             // Open the userclients form
             userclients userClientsForm = new userclients();
             userClientsForm.Show();
+            this.Hide();
         }
 
         private void usersearchbox_TextChanged(object sender, EventArgs e)
