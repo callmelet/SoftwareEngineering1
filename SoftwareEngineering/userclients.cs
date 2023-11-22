@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 namespace SoftwareEngineering
 {
@@ -17,11 +17,14 @@ namespace SoftwareEngineering
         private string connectionString = "Data Source=BOOK-5A3M5LR9FE\\SQLEXPRESS;Initial Catalog=VendorApplication;Integrated Security=True";
         private SqlDataAdapter dataAdapter;
         private DataSet dataSet;
+        private int selectedRowIndex = -1; // Track the selected row index
 
         public userclients()
         {
             InitializeComponent();
+                
         }
+
 
         private void userclients_Load(object sender, EventArgs e)
         {
@@ -51,7 +54,11 @@ namespace SoftwareEngineering
             dataAdapter.Fill(dataSet, "Clients");
 
             // Set the DataSource of the DataGridView
-            dataGridView1.DataSource = dataSet.Tables["Clients"];
+            dataGridView2.DataSource = dataSet.Tables["Clients"];
+
+            // Ensure that the scroll bars are visible for dataGridView2
+            dataGridView2.ScrollBars = ScrollBars.Both;
+            this.VerticalScroll.Visible = true;
         }
 
 
@@ -62,7 +69,7 @@ namespace SoftwareEngineering
             dataAdapter.Fill(dataSet, "Clients");
 
             // Disable editing after updating
-            dataGridView1.ReadOnly = false;  
+            dataGridView2.ReadOnly = false;  
         }
 
 
@@ -83,80 +90,33 @@ namespace SoftwareEngineering
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.ScrollBars= ScrollBars.Both;
-            this.VerticalScroll.Visible = true;
-            if (e.RowIndex >= 0)
-            {
-                int rowIndex = e.RowIndex;
-                int columnIndex = e.ColumnIndex;
-
-                if (columnIndex == dataGridView1.Columns["EDIT"].Index)
-                {
-                    // Allow editing for the entire DataGridView
-                    // dataGridView1.ReadOnly = false;
-
-                    // Handle edit button click
-                    EditClient(rowIndex);
-
-                }
-                else if (columnIndex == dataGridView1.Columns["DELETE"].Index)
-                {
-                    // Handle delete button click
-                    DeleteClient(rowIndex);
-                }
-            }   
-
-
+           
         }
 
         private void EditClient(int rowIndex)
         {
-            // Enable the DataGridView's edit mode for the selected row
-            dataGridView1.BeginEdit(true);
+            
         }
 
         private void DeleteClient(int rowIndex)
         {
-             // Display a warning message
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this client? This action cannot be undone.",
-                                                      "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                if (result == DialogResult.Yes)
-                {
-                    // Delete the client from the database
-                    int clientIdToDelete = Convert.ToInt32(dataGridView1.Rows[rowIndex].Cells["CLIENT ID"].Value);
-
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        connection.Open();
-
-                        string deleteQuery = "DELETE FROM Clients WHERE ClientID = @ClientID";
-
-                        using (SqlCommand cmd = new SqlCommand(deleteQuery, connection))
-                        {
-                            cmd.Parameters.AddWithValue("@ClientID", clientIdToDelete);
-                            cmd.ExecuteNonQuery();
-                        }
-                    }
-                
-
-
-                // Update the DataGridView after deletion
-                UpdateDataGridView();
-            }
         }
          
 
-
-private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            // Save changes to the database when editing is completed
-            dataAdapter.Update(dataSet, "Clients");
+            
         }
 
         private void ClientSolutionTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            if (selectedRowIndex >= 0)
+            {
+                dataSet.Tables["Clients"].Rows[selectedRowIndex]["CLIENT SOLUTION"] = ClientSolutionTextBox.Text;
+                dataAdapter.Update(dataSet, "Clients");
+                UpdateDataGridView();
+            }
         }
 
         private void AssignedVendorTextBox_TextChanged(object sender, EventArgs e)
@@ -196,7 +156,25 @@ private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs 
 
         private void addClientBtn_Click(object sender, EventArgs e)
         {
+            // Add new row to the DataGridView and DataSet
+            DataRow newRow = dataSet.Tables["Clients"].NewRow();
 
+            // Populate the new row with data from textboxes
+            newRow["CLIENT NAME"] = clientNameTextBox.Text;
+            newRow["CONTACT NUMBER"] = PhoneTextBox.Text;
+            newRow["EMAIL ADDRESS"] = EmailAddressTextBox.Text;
+            newRow["ADDRESS"] = AddressTextBox.Text;
+            newRow["JOB TITLE"] = JobTitleTextBox.Text;
+            newRow["COMPANY NAME"] = CompanyNameTextBox.Text;
+
+            // Add the new row to the DataSet
+            dataSet.Tables["Clients"].Rows.Add(newRow);
+
+            // Save changes to the database
+            dataAdapter.Update(dataSet, "Clients");
+
+            // Update the DataGridView after adding
+            UpdateDataGridView();
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -206,6 +184,67 @@ private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs 
             // Show the UserPage form
             Userpage userPage = new Userpage();
             userPage.Show();
+        }
+
+        
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            selectedRowIndex = e.RowIndex;
+
+        }
+
+        private void deleteClientbutton_Click(object sender, EventArgs e)
+        {
+            // Display a warning message
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this client? This action cannot be undone.",
+                                                  "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                // Get the selected row index
+                int rowIndex = dataGridView2.CurrentCell.RowIndex;
+
+                // Delete the selected row from the DataSet
+                dataSet.Tables["Clients"].Rows[rowIndex].Delete();
+
+                // Save changes to the database
+                dataAdapter.Update(dataSet, "Clients");
+
+                // Update the DataGridView after deletion
+                UpdateDataGridView();
+            }
+        }
+
+        private void EditClientbutton_Click(object sender, EventArgs e)
+        {
+            // Get the selected row index
+            int rowIndex = dataGridView2.CurrentCell.RowIndex;
+
+            // Update the selected row in the DataSet with data from textboxes
+            dataSet.Tables["Clients"].Rows[rowIndex]["CLIENT NAME"] = clientNameTextBox.Text;
+            dataSet.Tables["Clients"].Rows[rowIndex]["CONTACT NUMBER"] = PhoneTextBox.Text;
+            dataSet.Tables["Clients"].Rows[rowIndex]["EMAIL ADDRESS"] = EmailAddressTextBox.Text;
+            dataSet.Tables["Clients"].Rows[rowIndex]["ADDRESS"] = AddressTextBox.Text;
+            dataSet.Tables["Clients"].Rows[rowIndex]["JOB TITLE"] = JobTitleTextBox.Text;
+            dataSet.Tables["Clients"].Rows[rowIndex]["COMPANY NAME"] = CompanyNameTextBox.Text;
+
+            // Save changes to the database
+            dataAdapter.Update(dataSet, "Clients");
+
+            // Update the DataGridView after editing
+            UpdateDataGridView();
+
+        }
+
+        private void SaveClientInfoButton_Click(object sender, EventArgs e)
+        {
+            if (selectedRowIndex >= 0)
+            {
+                dataSet.Tables["Clients"].Rows[selectedRowIndex]["CLIENT SOLUTION"] = ClientSolutionTextBox.Text;
+                dataAdapter.Update(dataSet, "Clients");
+                UpdateDataGridView();
+            }
         }
     }
 }
