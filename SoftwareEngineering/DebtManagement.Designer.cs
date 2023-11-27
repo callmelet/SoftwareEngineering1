@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DebtManagementForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.upstart_vendorbutton = new System.Windows.Forms.Button();
+            this.sofi_vendorbutton = new System.Windows.Forms.Button();
+            this.payplanvendorbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +45,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(798, 198);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -56,47 +57,50 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Debt Management ";
             // 
-            // button1
+            // upstart_vendorbutton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(41, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 94);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
+            this.upstart_vendorbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.upstart_vendorbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("upstart_vendorbutton.BackgroundImage")));
+            this.upstart_vendorbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.upstart_vendorbutton.Location = new System.Drawing.Point(41, 264);
+            this.upstart_vendorbutton.Name = "upstart_vendorbutton";
+            this.upstart_vendorbutton.Size = new System.Drawing.Size(214, 94);
+            this.upstart_vendorbutton.TabIndex = 2;
+            this.upstart_vendorbutton.UseVisualStyleBackColor = false;
+            this.upstart_vendorbutton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // sofi_vendorbutton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(301, 264);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(218, 94);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = false;
+            this.sofi_vendorbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.sofi_vendorbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sofi_vendorbutton.BackgroundImage")));
+            this.sofi_vendorbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sofi_vendorbutton.Location = new System.Drawing.Point(301, 264);
+            this.sofi_vendorbutton.Name = "sofi_vendorbutton";
+            this.sofi_vendorbutton.Size = new System.Drawing.Size(218, 94);
+            this.sofi_vendorbutton.TabIndex = 3;
+            this.sofi_vendorbutton.UseVisualStyleBackColor = false;
+            this.sofi_vendorbutton.Click += new System.EventHandler(this.sofi_vendorbutton_Click);
             // 
-            // button3
+            // payplanvendorbutton
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(556, 264);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(206, 94);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = false;
+            this.payplanvendorbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.payplanvendorbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("payplanvendorbutton.BackgroundImage")));
+            this.payplanvendorbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.payplanvendorbutton.Location = new System.Drawing.Point(556, 264);
+            this.payplanvendorbutton.Name = "payplanvendorbutton";
+            this.payplanvendorbutton.Size = new System.Drawing.Size(206, 94);
+            this.payplanvendorbutton.TabIndex = 4;
+            this.payplanvendorbutton.UseVisualStyleBackColor = false;
+            this.payplanvendorbutton.Click += new System.EventHandler(this.payplanvendorbutton_Click);
             // 
             // DebtManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.payplanvendorbutton);
+            this.Controls.Add(this.sofi_vendorbutton);
+            this.Controls.Add(this.upstart_vendorbutton);
             this.Controls.Add(this.panel1);
             this.Name = "DebtManagementForm";
             this.Text = "DebtManagement";
@@ -110,8 +114,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button upstart_vendorbutton;
+        private System.Windows.Forms.Button sofi_vendorbutton;
+        private System.Windows.Forms.Button payplanvendorbutton;
     }
 }

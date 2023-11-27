@@ -47,46 +47,16 @@ namespace SoftwareEngineering
                 // The user selected "User" and clicked "Login"
                 UserLoginForm userLoginForm = new UserLoginForm();
                 userLoginForm.Show();
+                this.Hide();
             }
             else if (radioButtonADMIN.Checked)
             {
                 // The user selected "Admin" and clicked "Login"
                 AdminLoginForm adminLoginForm = new AdminLoginForm();
                 adminLoginForm.Show();
+                this.Hide();
             }
 
-            ////code for login page for user and admin
-            //string username = "user123"; // Replace with the username entered by the user
-            //string password = "hashedpassword123"; // Replace with the hashed password entered by the user
-
-            //using (connection = new SqlConnection(connectionString))
-            //{
-            //    connection.Open();
-
-            //    // Query to retrieve UserType from your database
-            //    string query = "SELECT UserType FROM dbo.user_table WHERE Username = @Username AND Password = @Password";
-
-            //    using (SqlCommand command = new SqlCommand(query, connection))
-            //    {
-            //        command.Parameters.AddWithValue("@Username", username);
-            //        command.Parameters.AddWithValue("@Password", password);
-
-            //        string userType = (string)command.ExecuteScalar();
-
-            //        if (userType == "User")
-            //        {
-            //            // The user is a regular user
-            //            // Open the user-specific form or perform user-related actions
-            //        }
-            //        else if (userType == "Admin")
-            //        {
-            //            // The user is an admin
-            //            // Open the admin-specific form or perform admin-related actions
-            //        }
-            //    }
-
-            //    connection.Close();
-            //}
 
         }
 
@@ -98,12 +68,14 @@ namespace SoftwareEngineering
                 // The user selected "User" and clicked "Register"
                 UserRegistrationForm userRegistrationForm = new UserRegistrationForm();
                 userRegistrationForm.Show();
+                this.Hide();
             }
             else if (radioButtonADMIN.Checked)
             {
                 // The user selected "Admin" and clicked "Register"
                 AdminRegistrationForm adminRegistrationForm = new AdminRegistrationForm();
                 adminRegistrationForm.Show();
+                this.Hide();
             }
 
 

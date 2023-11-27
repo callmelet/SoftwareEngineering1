@@ -81,6 +81,7 @@ namespace SoftwareEngineering
             // Open the userprofile form
             userprofile userProfileForm = new userprofile();
             userProfileForm.Show();
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -103,22 +104,27 @@ namespace SoftwareEngineering
                 case "Investment Planning":
                     InvestmentPlanningForm investmentPlanningForm = new InvestmentPlanningForm();
                     investmentPlanningForm.Show();
+                    this.Hide();
                     break;
                 case "Budgeting":
                     BudgetingForm budgetingForm = new BudgetingForm();
                     budgetingForm.Show();
+                    this.Hide();    
                     break;
                 case "Tax Planning":
                     TaxPlanningForm taxPlanningForm = new TaxPlanningForm();
                     taxPlanningForm.Show();
+                    this.Hide();    
                     break;
                 case "Financial Analysis":
                     FinancialAnalysisForm financialAnalysisForm = new FinancialAnalysisForm();
                     financialAnalysisForm.Show();
+                    this.Hide();
                     break;
                 case "Debt Management":
                     DebtManagementForm debtManagementForm = new DebtManagementForm();
                     debtManagementForm.Show();
+                    this.Hide();
                     break;
                 default:
                     MessageBox.Show("The solution you are looking for does not exist. Please check the name and try again.");
@@ -140,6 +146,9 @@ namespace SoftwareEngineering
           
         }
 
+        private void Userpage_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

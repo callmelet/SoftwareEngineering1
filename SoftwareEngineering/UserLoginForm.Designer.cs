@@ -33,6 +33,7 @@
             this.textBox1username_user = new System.Windows.Forms.TextBox();
             this.textBox1userpassword = new System.Windows.Forms.TextBox();
             this.loginbutton1_user = new System.Windows.Forms.Button();
+            this.backbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +75,7 @@
             // 
             // loginbutton1_user
             // 
-            this.loginbutton1_user.Location = new System.Drawing.Point(306, 283);
+            this.loginbutton1_user.Location = new System.Drawing.Point(225, 277);
             this.loginbutton1_user.Name = "loginbutton1_user";
             this.loginbutton1_user.Size = new System.Drawing.Size(149, 34);
             this.loginbutton1_user.TabIndex = 5;
@@ -82,11 +83,21 @@
             this.loginbutton1_user.UseVisualStyleBackColor = true;
             this.loginbutton1_user.Click += new System.EventHandler(this.loginbutton1_user_Click);
             // 
+            // backbutton
+            // 
+            this.backbutton.Location = new System.Drawing.Point(441, 277);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.Size = new System.Drawing.Size(143, 34);
+            this.backbutton.TabIndex = 6;
+            this.backbutton.Text = "BACK";
+            this.backbutton.UseVisualStyleBackColor = true;
+            // 
             // UserLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backbutton);
             this.Controls.Add(this.loginbutton1_user);
             this.Controls.Add(this.textBox1userpassword);
             this.Controls.Add(this.textBox1username_user);
@@ -107,5 +118,6 @@
         private System.Windows.Forms.TextBox textBox1username_user;
         private System.Windows.Forms.TextBox textBox1userpassword;
         private System.Windows.Forms.Button loginbutton1_user;
+        private System.Windows.Forms.Button backbutton;
     }
 }

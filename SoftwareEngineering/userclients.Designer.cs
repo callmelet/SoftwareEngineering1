@@ -50,23 +50,34 @@
             this.label8 = new System.Windows.Forms.Label();
             this.ClientSolutionTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.SaveClientInfoButton = new System.Windows.Forms.Button();
             this.AssignedVendorTextBox = new System.Windows.Forms.TextBox();
             this.EditClientbutton = new System.Windows.Forms.Button();
             this.deleteClientbutton = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.cLIENTIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cLIENTNAMEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cONTACTNUMBERDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eMAILADDRESSDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aDDRESSDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cLIENTSOLUTIONDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jOBTITLEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cOMPANYNAMEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaveClientInfoButton = new System.Windows.Forms.Button();
+            this.clientsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vendorApplicationDataSet2 = new SoftwareEngineering.VendorApplicationDataSet2();
+            this.clients_ListTableAdapter = new SoftwareEngineering.VendorApplicationDataSet2TableAdapters.Clients_ListTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.vendorApplicationDataSet3 = new SoftwareEngineering.VendorApplicationDataSet3();
+            this.clientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientsTableAdapter1 = new SoftwareEngineering.VendorApplicationDataSet3TableAdapters.ClientsTableAdapter();
+            this.cLIENTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLIENTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cONTACTNUMBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eMAILADDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLIENTSOLUTIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jOBTITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cOMPANYNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aSSIGNEDVENDORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendorApplicationDataSet1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorApplicationDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorApplicationDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // clientsBindingSource
@@ -227,7 +238,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Khaki;
+            this.panel2.BackColor = System.Drawing.Color.SandyBrown;
             this.panel2.Controls.Add(this.SaveClientInfoButton);
             this.panel2.Controls.Add(this.AssignedVendorTextBox);
             this.panel2.Controls.Add(this.ClientSolutionTextBox);
@@ -237,6 +248,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(428, 268);
             this.panel2.TabIndex = 10;
+            // 
+            // SaveClientInfoButton
+            // 
+            this.SaveClientInfoButton.BackColor = System.Drawing.Color.Coral;
+            this.SaveClientInfoButton.Location = new System.Drawing.Point(144, 202);
+            this.SaveClientInfoButton.Name = "SaveClientInfoButton";
+            this.SaveClientInfoButton.Size = new System.Drawing.Size(144, 39);
+            this.SaveClientInfoButton.TabIndex = 19;
+            this.SaveClientInfoButton.Text = "SAVE";
+            this.SaveClientInfoButton.UseVisualStyleBackColor = false;
+            this.SaveClientInfoButton.Click += new System.EventHandler(this.SaveClientInfoButton_Click);
             // 
             // AssignedVendorTextBox
             // 
@@ -268,119 +290,138 @@
             this.deleteClientbutton.UseVisualStyleBackColor = false;
             this.deleteClientbutton.Click += new System.EventHandler(this.deleteClientbutton_Click);
             // 
-            // dataGridView2
+            // clientsListBindingSource
             // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cLIENTIDDataGridViewTextBoxColumn1,
-            this.cLIENTNAMEDataGridViewTextBoxColumn1,
-            this.cONTACTNUMBERDataGridViewTextBoxColumn1,
-            this.eMAILADDRESSDataGridViewTextBoxColumn1,
-            this.aDDRESSDataGridViewTextBoxColumn1,
-            this.cLIENTSOLUTIONDataGridViewTextBoxColumn1,
-            this.jOBTITLEDataGridViewTextBoxColumn1,
-            this.cOMPANYNAMEDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.clientsBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(-7, 324);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(1577, 252);
-            this.dataGridView2.TabIndex = 27;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.clientsListBindingSource.DataMember = "Clients_List";
+            this.clientsListBindingSource.DataSource = this.vendorApplicationDataSet2;
             // 
-            // cLIENTIDDataGridViewTextBoxColumn1
+            // vendorApplicationDataSet2
             // 
-            this.cLIENTIDDataGridViewTextBoxColumn1.DataPropertyName = "CLIENT ID";
-            this.cLIENTIDDataGridViewTextBoxColumn1.HeaderText = "CLIENT ID";
-            this.cLIENTIDDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.cLIENTIDDataGridViewTextBoxColumn1.Name = "cLIENTIDDataGridViewTextBoxColumn1";
-            this.cLIENTIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.cLIENTIDDataGridViewTextBoxColumn1.Width = 150;
+            this.vendorApplicationDataSet2.DataSetName = "VendorApplicationDataSet2";
+            this.vendorApplicationDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cLIENTNAMEDataGridViewTextBoxColumn1
+            // clients_ListTableAdapter
             // 
-            this.cLIENTNAMEDataGridViewTextBoxColumn1.DataPropertyName = "CLIENT NAME";
-            this.cLIENTNAMEDataGridViewTextBoxColumn1.HeaderText = "CLIENT NAME";
-            this.cLIENTNAMEDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.cLIENTNAMEDataGridViewTextBoxColumn1.Name = "cLIENTNAMEDataGridViewTextBoxColumn1";
-            this.cLIENTNAMEDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.cLIENTNAMEDataGridViewTextBoxColumn1.Width = 150;
+            this.clients_ListTableAdapter.ClearBeforeFill = true;
             // 
-            // cONTACTNUMBERDataGridViewTextBoxColumn1
+            // dataGridView1
             // 
-            this.cONTACTNUMBERDataGridViewTextBoxColumn1.DataPropertyName = "CONTACT NUMBER";
-            this.cONTACTNUMBERDataGridViewTextBoxColumn1.HeaderText = "CONTACT NUMBER";
-            this.cONTACTNUMBERDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.cONTACTNUMBERDataGridViewTextBoxColumn1.Name = "cONTACTNUMBERDataGridViewTextBoxColumn1";
-            this.cONTACTNUMBERDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.cONTACTNUMBERDataGridViewTextBoxColumn1.Width = 150;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cLIENTIDDataGridViewTextBoxColumn,
+            this.cLIENTNAMEDataGridViewTextBoxColumn,
+            this.cONTACTNUMBERDataGridViewTextBoxColumn,
+            this.eMAILADDRESSDataGridViewTextBoxColumn,
+            this.aDDRESSDataGridViewTextBoxColumn,
+            this.cLIENTSOLUTIONDataGridViewTextBoxColumn,
+            this.jOBTITLEDataGridViewTextBoxColumn,
+            this.cOMPANYNAMEDataGridViewTextBoxColumn,
+            this.aSSIGNEDVENDORDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.clientsBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(-5, 335);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1522, 196);
+            this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_3);
             // 
-            // eMAILADDRESSDataGridViewTextBoxColumn1
+            // vendorApplicationDataSet3
             // 
-            this.eMAILADDRESSDataGridViewTextBoxColumn1.DataPropertyName = "EMAIL ADDRESS";
-            this.eMAILADDRESSDataGridViewTextBoxColumn1.HeaderText = "EMAIL ADDRESS";
-            this.eMAILADDRESSDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.eMAILADDRESSDataGridViewTextBoxColumn1.Name = "eMAILADDRESSDataGridViewTextBoxColumn1";
-            this.eMAILADDRESSDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.eMAILADDRESSDataGridViewTextBoxColumn1.Width = 150;
+            this.vendorApplicationDataSet3.DataSetName = "VendorApplicationDataSet3";
+            this.vendorApplicationDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // aDDRESSDataGridViewTextBoxColumn1
+            // clientsBindingSource1
             // 
-            this.aDDRESSDataGridViewTextBoxColumn1.DataPropertyName = "ADDRESS";
-            this.aDDRESSDataGridViewTextBoxColumn1.HeaderText = "ADDRESS";
-            this.aDDRESSDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.aDDRESSDataGridViewTextBoxColumn1.Name = "aDDRESSDataGridViewTextBoxColumn1";
-            this.aDDRESSDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.aDDRESSDataGridViewTextBoxColumn1.Width = 150;
+            this.clientsBindingSource1.DataMember = "Clients";
+            this.clientsBindingSource1.DataSource = this.vendorApplicationDataSet3;
             // 
-            // cLIENTSOLUTIONDataGridViewTextBoxColumn1
+            // clientsTableAdapter1
             // 
-            this.cLIENTSOLUTIONDataGridViewTextBoxColumn1.DataPropertyName = "CLIENT SOLUTION";
-            this.cLIENTSOLUTIONDataGridViewTextBoxColumn1.HeaderText = "CLIENT SOLUTION";
-            this.cLIENTSOLUTIONDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.cLIENTSOLUTIONDataGridViewTextBoxColumn1.Name = "cLIENTSOLUTIONDataGridViewTextBoxColumn1";
-            this.cLIENTSOLUTIONDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.cLIENTSOLUTIONDataGridViewTextBoxColumn1.Width = 150;
+            this.clientsTableAdapter1.ClearBeforeFill = true;
             // 
-            // jOBTITLEDataGridViewTextBoxColumn1
+            // cLIENTIDDataGridViewTextBoxColumn
             // 
-            this.jOBTITLEDataGridViewTextBoxColumn1.DataPropertyName = "JOB TITLE";
-            this.jOBTITLEDataGridViewTextBoxColumn1.HeaderText = "JOB TITLE";
-            this.jOBTITLEDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.jOBTITLEDataGridViewTextBoxColumn1.Name = "jOBTITLEDataGridViewTextBoxColumn1";
-            this.jOBTITLEDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.jOBTITLEDataGridViewTextBoxColumn1.Width = 150;
+            this.cLIENTIDDataGridViewTextBoxColumn.DataPropertyName = "CLIENT ID";
+            this.cLIENTIDDataGridViewTextBoxColumn.HeaderText = "CLIENT ID";
+            this.cLIENTIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cLIENTIDDataGridViewTextBoxColumn.Name = "cLIENTIDDataGridViewTextBoxColumn";
+            this.cLIENTIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cLIENTIDDataGridViewTextBoxColumn.Width = 150;
             // 
-            // cOMPANYNAMEDataGridViewTextBoxColumn1
+            // cLIENTNAMEDataGridViewTextBoxColumn
             // 
-            this.cOMPANYNAMEDataGridViewTextBoxColumn1.DataPropertyName = "COMPANY NAME";
-            this.cOMPANYNAMEDataGridViewTextBoxColumn1.HeaderText = "COMPANY NAME";
-            this.cOMPANYNAMEDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.cOMPANYNAMEDataGridViewTextBoxColumn1.Name = "cOMPANYNAMEDataGridViewTextBoxColumn1";
-            this.cOMPANYNAMEDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.cOMPANYNAMEDataGridViewTextBoxColumn1.Width = 150;
+            this.cLIENTNAMEDataGridViewTextBoxColumn.DataPropertyName = "CLIENT NAME";
+            this.cLIENTNAMEDataGridViewTextBoxColumn.HeaderText = "CLIENT NAME";
+            this.cLIENTNAMEDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cLIENTNAMEDataGridViewTextBoxColumn.Name = "cLIENTNAMEDataGridViewTextBoxColumn";
+            this.cLIENTNAMEDataGridViewTextBoxColumn.Width = 150;
             // 
-            // SaveClientInfoButton
+            // cONTACTNUMBERDataGridViewTextBoxColumn
             // 
-            this.SaveClientInfoButton.BackColor = System.Drawing.Color.Coral;
-            this.SaveClientInfoButton.Location = new System.Drawing.Point(144, 202);
-            this.SaveClientInfoButton.Name = "SaveClientInfoButton";
-            this.SaveClientInfoButton.Size = new System.Drawing.Size(144, 39);
-            this.SaveClientInfoButton.TabIndex = 19;
-            this.SaveClientInfoButton.Text = "SAVE";
-            this.SaveClientInfoButton.UseVisualStyleBackColor = false;
-            this.SaveClientInfoButton.Click += new System.EventHandler(this.SaveClientInfoButton_Click);
+            this.cONTACTNUMBERDataGridViewTextBoxColumn.DataPropertyName = "CONTACT NUMBER";
+            this.cONTACTNUMBERDataGridViewTextBoxColumn.HeaderText = "CONTACT NUMBER";
+            this.cONTACTNUMBERDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cONTACTNUMBERDataGridViewTextBoxColumn.Name = "cONTACTNUMBERDataGridViewTextBoxColumn";
+            this.cONTACTNUMBERDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // eMAILADDRESSDataGridViewTextBoxColumn
+            // 
+            this.eMAILADDRESSDataGridViewTextBoxColumn.DataPropertyName = "EMAIL ADDRESS";
+            this.eMAILADDRESSDataGridViewTextBoxColumn.HeaderText = "EMAIL ADDRESS";
+            this.eMAILADDRESSDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.eMAILADDRESSDataGridViewTextBoxColumn.Name = "eMAILADDRESSDataGridViewTextBoxColumn";
+            this.eMAILADDRESSDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // aDDRESSDataGridViewTextBoxColumn
+            // 
+            this.aDDRESSDataGridViewTextBoxColumn.DataPropertyName = "ADDRESS";
+            this.aDDRESSDataGridViewTextBoxColumn.HeaderText = "ADDRESS";
+            this.aDDRESSDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.aDDRESSDataGridViewTextBoxColumn.Name = "aDDRESSDataGridViewTextBoxColumn";
+            this.aDDRESSDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // cLIENTSOLUTIONDataGridViewTextBoxColumn
+            // 
+            this.cLIENTSOLUTIONDataGridViewTextBoxColumn.DataPropertyName = "CLIENT SOLUTION";
+            this.cLIENTSOLUTIONDataGridViewTextBoxColumn.HeaderText = "CLIENT SOLUTION";
+            this.cLIENTSOLUTIONDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cLIENTSOLUTIONDataGridViewTextBoxColumn.Name = "cLIENTSOLUTIONDataGridViewTextBoxColumn";
+            this.cLIENTSOLUTIONDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // jOBTITLEDataGridViewTextBoxColumn
+            // 
+            this.jOBTITLEDataGridViewTextBoxColumn.DataPropertyName = "JOB TITLE";
+            this.jOBTITLEDataGridViewTextBoxColumn.HeaderText = "JOB TITLE";
+            this.jOBTITLEDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.jOBTITLEDataGridViewTextBoxColumn.Name = "jOBTITLEDataGridViewTextBoxColumn";
+            this.jOBTITLEDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // cOMPANYNAMEDataGridViewTextBoxColumn
+            // 
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.DataPropertyName = "COMPANY NAME";
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.HeaderText = "COMPANY NAME";
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.Name = "cOMPANYNAMEDataGridViewTextBoxColumn";
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // aSSIGNEDVENDORDataGridViewTextBoxColumn
+            // 
+            this.aSSIGNEDVENDORDataGridViewTextBoxColumn.DataPropertyName = "ASSIGNED VENDOR";
+            this.aSSIGNEDVENDORDataGridViewTextBoxColumn.HeaderText = "ASSIGNED VENDOR";
+            this.aSSIGNEDVENDORDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.aSSIGNEDVENDORDataGridViewTextBoxColumn.Name = "aSSIGNEDVENDORDataGridViewTextBoxColumn";
+            this.aSSIGNEDVENDORDataGridViewTextBoxColumn.Width = 150;
             // 
             // userclients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(1569, 667);
-            this.Controls.Add(this.dataGridView2);
+            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.ClientSize = new System.Drawing.Size(1924, 746);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.deleteClientbutton);
             this.Controls.Add(this.EditClientbutton);
             this.Controls.Add(this.PhoneTextBox);
@@ -405,7 +446,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.vendorApplicationDataSet1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorApplicationDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorApplicationDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,15 +481,22 @@
         private System.Windows.Forms.TextBox AssignedVendorTextBox;
         private System.Windows.Forms.Button EditClientbutton;
         private System.Windows.Forms.Button deleteClientbutton;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTNAMEDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cONTACTNUMBERDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eMAILADDRESSDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aDDRESSDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTSOLUTIONDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jOBTITLEDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cOMPANYNAMEDataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button SaveClientInfoButton;
+        private VendorApplicationDataSet2 vendorApplicationDataSet2;
+        private System.Windows.Forms.BindingSource clientsListBindingSource;
+        private VendorApplicationDataSet2TableAdapters.Clients_ListTableAdapter clients_ListTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private VendorApplicationDataSet3 vendorApplicationDataSet3;
+        private System.Windows.Forms.BindingSource clientsBindingSource1;
+        private VendorApplicationDataSet3TableAdapters.ClientsTableAdapter clientsTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cONTACTNUMBERDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eMAILADDRESSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aDDRESSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTSOLUTIONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jOBTITLEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cOMPANYNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aSSIGNEDVENDORDataGridViewTextBoxColumn;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SoftwareEngineering
 {
-    public partial class Homepage1 : Form
+    public partial class PayplanDebtManagement : Form
     {
-        public Homepage1()
+        public PayplanDebtManagement()
         {
             InitializeComponent();
         }
