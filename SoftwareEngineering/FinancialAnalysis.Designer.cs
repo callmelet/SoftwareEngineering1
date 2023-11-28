@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinancialAnalysisForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.factsetFinancialAnalysisButton = new System.Windows.Forms.Button();
+            this.bloombergfinancialbutton = new System.Windows.Forms.Button();
+            this.goldmanfinancialbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,47 +56,50 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Financial Analysis ";
             // 
-            // button1
+            // factsetFinancialAnalysisButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(42, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 94);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = false;
+            this.factsetFinancialAnalysisButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.factsetFinancialAnalysisButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("factsetFinancialAnalysisButton.BackgroundImage")));
+            this.factsetFinancialAnalysisButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.factsetFinancialAnalysisButton.Location = new System.Drawing.Point(42, 262);
+            this.factsetFinancialAnalysisButton.Name = "factsetFinancialAnalysisButton";
+            this.factsetFinancialAnalysisButton.Size = new System.Drawing.Size(214, 94);
+            this.factsetFinancialAnalysisButton.TabIndex = 3;
+            this.factsetFinancialAnalysisButton.UseVisualStyleBackColor = false;
+            this.factsetFinancialAnalysisButton.Click += new System.EventHandler(this.factsetFinancialAnalysisButton_Click);
             // 
-            // button2
+            // bloombergfinancialbutton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(299, 262);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 94);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = false;
+            this.bloombergfinancialbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bloombergfinancialbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bloombergfinancialbutton.BackgroundImage")));
+            this.bloombergfinancialbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bloombergfinancialbutton.Location = new System.Drawing.Point(299, 262);
+            this.bloombergfinancialbutton.Name = "bloombergfinancialbutton";
+            this.bloombergfinancialbutton.Size = new System.Drawing.Size(214, 94);
+            this.bloombergfinancialbutton.TabIndex = 4;
+            this.bloombergfinancialbutton.UseVisualStyleBackColor = false;
+            this.bloombergfinancialbutton.Click += new System.EventHandler(this.bloombergfinancialbutton_Click);
             // 
-            // button3
+            // goldmanfinancialbutton
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(549, 262);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 94);
-            this.button3.TabIndex = 5;
-            this.button3.UseVisualStyleBackColor = false;
+            this.goldmanfinancialbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.goldmanfinancialbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("goldmanfinancialbutton.BackgroundImage")));
+            this.goldmanfinancialbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.goldmanfinancialbutton.Location = new System.Drawing.Point(549, 262);
+            this.goldmanfinancialbutton.Name = "goldmanfinancialbutton";
+            this.goldmanfinancialbutton.Size = new System.Drawing.Size(214, 94);
+            this.goldmanfinancialbutton.TabIndex = 5;
+            this.goldmanfinancialbutton.UseVisualStyleBackColor = false;
+            this.goldmanfinancialbutton.Click += new System.EventHandler(this.goldmanfinancialbutton_Click);
             // 
             // FinancialAnalysisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.goldmanfinancialbutton);
+            this.Controls.Add(this.bloombergfinancialbutton);
+            this.Controls.Add(this.factsetFinancialAnalysisButton);
             this.Controls.Add(this.panel1);
             this.Name = "FinancialAnalysisForm";
             this.Text = "FinancialConsultation";
@@ -110,8 +113,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button factsetFinancialAnalysisButton;
+        private System.Windows.Forms.Button bloombergfinancialbutton;
+        private System.Windows.Forms.Button goldmanfinancialbutton;
     }
 }

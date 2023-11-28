@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaxPlanningForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.EYTaxbutton = new System.Windows.Forms.Button();
+            this.indineroTaxbutton = new System.Windows.Forms.Button();
+            this.taxscoutsbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,47 +56,50 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tax Planning ";
             // 
-            // button1
+            // EYTaxbutton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(25, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 94);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
+            this.EYTaxbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EYTaxbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EYTaxbutton.BackgroundImage")));
+            this.EYTaxbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EYTaxbutton.Location = new System.Drawing.Point(25, 279);
+            this.EYTaxbutton.Name = "EYTaxbutton";
+            this.EYTaxbutton.Size = new System.Drawing.Size(214, 94);
+            this.EYTaxbutton.TabIndex = 4;
+            this.EYTaxbutton.UseVisualStyleBackColor = false;
+            this.EYTaxbutton.Click += new System.EventHandler(this.EYTaxbutton_Click);
             // 
-            // button2
+            // indineroTaxbutton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(285, 279);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 94);
-            this.button2.TabIndex = 5;
-            this.button2.UseVisualStyleBackColor = false;
+            this.indineroTaxbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.indineroTaxbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("indineroTaxbutton.BackgroundImage")));
+            this.indineroTaxbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.indineroTaxbutton.Location = new System.Drawing.Point(285, 279);
+            this.indineroTaxbutton.Name = "indineroTaxbutton";
+            this.indineroTaxbutton.Size = new System.Drawing.Size(214, 94);
+            this.indineroTaxbutton.TabIndex = 5;
+            this.indineroTaxbutton.UseVisualStyleBackColor = false;
+            this.indineroTaxbutton.Click += new System.EventHandler(this.indineroTaxbutton_Click);
             // 
-            // button3
+            // taxscoutsbutton
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(547, 279);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 94);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = false;
+            this.taxscoutsbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.taxscoutsbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("taxscoutsbutton.BackgroundImage")));
+            this.taxscoutsbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.taxscoutsbutton.Location = new System.Drawing.Point(547, 279);
+            this.taxscoutsbutton.Name = "taxscoutsbutton";
+            this.taxscoutsbutton.Size = new System.Drawing.Size(214, 94);
+            this.taxscoutsbutton.TabIndex = 6;
+            this.taxscoutsbutton.UseVisualStyleBackColor = false;
+            this.taxscoutsbutton.Click += new System.EventHandler(this.taxscoutsbutton_Click);
             // 
             // TaxPlanningForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.taxscoutsbutton);
+            this.Controls.Add(this.indineroTaxbutton);
+            this.Controls.Add(this.EYTaxbutton);
             this.Controls.Add(this.panel1);
             this.Name = "TaxPlanningForm";
             this.Text = "TaxPlanning";
@@ -110,8 +113,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button EYTaxbutton;
+        private System.Windows.Forms.Button indineroTaxbutton;
+        private System.Windows.Forms.Button taxscoutsbutton;
     }
 }

@@ -11,11 +11,10 @@ using System.IO;
 
 namespace SoftwareEngineering
 {
-    public partial class PayplanDebtManagement : Form
+    public partial class BloombergFinancialAnalysis : Form
     {
         private string vendorInformation = "";
-
-        public PayplanDebtManagement()
+        public BloombergFinancialAnalysis()
         {
             InitializeComponent();
         }
@@ -28,7 +27,7 @@ namespace SoftwareEngineering
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify the URL you want to redirect to
-            string url = "https://www.payplan.com/";
+            string url = "https://www.bloomberg.com/professional/expertise/analyst/";
 
             // Open the URL in the default web browser
             System.Diagnostics.Process.Start(url);
@@ -37,9 +36,9 @@ namespace SoftwareEngineering
         private void button1_Click(object sender, EventArgs e)
         {
             // Save vendor information (for example, in a string)
-            vendorInformation = "Vendor Name: Payplan Debt Management\n" +
-                               "Contact Email: info@payplan.com\n" +
-                               "Contact Number: 1-800-555-5556\n";
+            vendorInformation = "Vendor Name: Bloomberg Financial Analysis\n" +
+                               "Contact Email: info@bloomberg.com\n" +
+                               "Contact Number: 1-800-555-5558\n";
 
             // Generate an HTML file with the vendor information
             string htmlContent = $@"<html>
@@ -48,11 +47,16 @@ namespace SoftwareEngineering
                                    </html>";
 
             // Save the HTML content to a temporary file
-            string tempHtmlFile = Path.Combine(Path.GetTempPath(), "VendorInformation_Payplan.html");
+            string tempHtmlFile = Path.Combine(Path.GetTempPath(), "VendorInformation_Bloomberg.html");
             File.WriteAllText(tempHtmlFile, htmlContent);
 
             // Open the HTML file in the default web browser
             System.Diagnostics.Process.Start(tempHtmlFile);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -11,35 +11,34 @@ using System.IO;
 
 namespace SoftwareEngineering
 {
-    public partial class PayplanDebtManagement : Form
+    public partial class IndineroTaxPlanning : Form
     {
         private string vendorInformation = "";
-
-        public PayplanDebtManagement()
+        public IndineroTaxPlanning()
         {
             InitializeComponent();
         }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        private void IndineroTaxPlanning_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify the URL you want to redirect to
-            string url = "https://www.payplan.com/";
+            string url = "https://www.indinero.com/";
 
             // Open the URL in the default web browser
             System.Diagnostics.Process.Start(url);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             // Save vendor information (for example, in a string)
-            vendorInformation = "Vendor Name: Payplan Debt Management\n" +
-                               "Contact Email: info@payplan.com\n" +
-                               "Contact Number: 1-800-555-5556\n";
+            vendorInformation = "Vendor Name: Indinero Tax Planning\n" +
+                               "Contact Email: info@indinero.com\n" +
+                               "Contact Number: 1-800-555-5564\n";
 
             // Generate an HTML file with the vendor information
             string htmlContent = $@"<html>
@@ -48,7 +47,7 @@ namespace SoftwareEngineering
                                    </html>";
 
             // Save the HTML content to a temporary file
-            string tempHtmlFile = Path.Combine(Path.GetTempPath(), "VendorInformation_Payplan.html");
+            string tempHtmlFile = Path.Combine(Path.GetTempPath(), "VendorInformation_Indinero.html");
             File.WriteAllText(tempHtmlFile, htmlContent);
 
             // Open the HTML file in the default web browser

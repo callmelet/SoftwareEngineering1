@@ -206,6 +206,24 @@
     <Compile Include="AdminRegistrationForm.Designer.cs">
       <DependentUpon>AdminRegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BettermentInvestmentPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BettermentInvestmentPlanning.Designer.cs">
+      <DependentUpon>BettermentInvestmentPlanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlackrockInvestmentPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlackrockInvestmentPlanning.Designer.cs">
+      <DependentUpon>BlackrockInvestmentPlanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloombergFinancialAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloombergFinancialAnalysis.Designer.cs">
+      <DependentUpon>BloombergFinancialAnalysis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Budgeting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,11 +236,29 @@
     <Compile Include="DebtManagement.Designer.cs">
       <DependentUpon>DebtManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="EYTaxPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EYTaxPlanning.Designer.cs">
+      <DependentUpon>EYTaxPlanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FactsetFinancialAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FactsetFinancialAnalysis.Designer.cs">
+      <DependentUpon>FactsetFinancialAnalysis.cs</DependentUpon>
+    </Compile>
     <Compile Include="FinancialAnalysis.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FinancialAnalysis.Designer.cs">
       <DependentUpon>FinancialAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoldmanSachsFinancialAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoldmanSachsFinancialAnalysis.Designer.cs">
+      <DependentUpon>GoldmanSachsFinancialAnalysis.cs</DependentUpon>
     </Compile>
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
@@ -230,11 +266,23 @@
     <Compile Include="Homepage.Designer.cs">
       <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="IndineroTaxPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndineroTaxPlanning.Designer.cs">
+      <DependentUpon>IndineroTaxPlanning.cs</DependentUpon>
+    </Compile>
     <Compile Include="InvestmentPlanning.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InvestmentPlanning.Designer.cs">
       <DependentUpon>InvestmentPlanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JPMorganInvestmentPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JPMorganInvestmentPlanning.Designer.cs">
+      <DependentUpon>JPMorganInvestmentPlanning.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginInfo.cs" />
     <Compile Include="PayplanDebtManagement.cs">
@@ -245,17 +293,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickbooksBudgeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickbooksBudgeting.Designer.cs">
+      <DependentUpon>QuickbooksBudgeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="SofiDebtManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SofiDebtManagement.Designer.cs">
       <DependentUpon>SofiDebtManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpendeskBudgeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpendeskBudgeting.Designer.cs">
+      <DependentUpon>SpendeskBudgeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaxPlanning.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TaxPlanning.Designer.cs">
       <DependentUpon>TaxPlanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxScouts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxScouts.Designer.cs">
+      <DependentUpon>TaxScouts.cs</DependentUpon>
     </Compile>
     <Compile Include="UpstartDebtManagement.cs">
       <SubType>Form</SubType>
@@ -313,11 +379,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VendorApplicationDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="XeroBudgeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XeroBudgeting.Designer.cs">
+      <DependentUpon>XeroBudgeting.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminRegistrationForm.resx">
       <DependentUpon>AdminRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BettermentInvestmentPlanning.resx">
+      <DependentUpon>BettermentInvestmentPlanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlackrockInvestmentPlanning.resx">
+      <DependentUpon>BlackrockInvestmentPlanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloombergFinancialAnalysis.resx">
+      <DependentUpon>BloombergFinancialAnalysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Budgeting.resx">
       <DependentUpon>Budgeting.cs</DependentUpon>
@@ -325,14 +406,32 @@
     <EmbeddedResource Include="DebtManagement.resx">
       <DependentUpon>DebtManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EYTaxPlanning.resx">
+      <DependentUpon>EYTaxPlanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactsetFinancialAnalysis.resx">
+      <DependentUpon>FactsetFinancialAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FinancialAnalysis.resx">
       <DependentUpon>FinancialAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoldmanSachsFinancialAnalysis.resx">
+      <DependentUpon>GoldmanSachsFinancialAnalysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IndineroTaxPlanning.resx">
+      <DependentUpon>IndineroTaxPlanning.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InvestmentPlanning.resx">
       <DependentUpon>InvestmentPlanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JPMorganInvestmentPlanning.resx">
+      <DependentUpon>JPMorganInvestmentPlanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayplanDebtManagement.resx">
+      <DependentUpon>PayplanDebtManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -343,11 +442,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuickbooksBudgeting.resx">
+      <DependentUpon>QuickbooksBudgeting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SofiDebtManagement.resx">
       <DependentUpon>SofiDebtManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SpendeskBudgeting.resx">
+      <DependentUpon>SpendeskBudgeting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TaxPlanning.resx">
       <DependentUpon>TaxPlanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxScouts.resx">
+      <DependentUpon>TaxScouts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpstartDebtManagement.resx">
       <DependentUpon>UpstartDebtManagement.cs</DependentUpon>
@@ -366,6 +474,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserRegistrationForm.resx">
       <DependentUpon>UserRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XeroBudgeting.resx">
+      <DependentUpon>XeroBudgeting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

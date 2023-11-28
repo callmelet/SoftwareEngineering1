@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvestmentPlanningForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bettermentInvestmentButton = new System.Windows.Forms.Button();
+            this.blackrockInvestmentbutton = new System.Windows.Forms.Button();
+            this.JPinvestmentbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,47 +56,50 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Investment Planning";
             // 
-            // button1
+            // bettermentInvestmentButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(32, 266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 94);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
+            this.bettermentInvestmentButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bettermentInvestmentButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bettermentInvestmentButton.BackgroundImage")));
+            this.bettermentInvestmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bettermentInvestmentButton.Location = new System.Drawing.Point(32, 266);
+            this.bettermentInvestmentButton.Name = "bettermentInvestmentButton";
+            this.bettermentInvestmentButton.Size = new System.Drawing.Size(214, 94);
+            this.bettermentInvestmentButton.TabIndex = 4;
+            this.bettermentInvestmentButton.UseVisualStyleBackColor = false;
+            this.bettermentInvestmentButton.Click += new System.EventHandler(this.bettermentInvestmentButton_Click);
             // 
-            // button2
+            // blackrockInvestmentbutton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(286, 266);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 94);
-            this.button2.TabIndex = 5;
-            this.button2.UseVisualStyleBackColor = false;
+            this.blackrockInvestmentbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.blackrockInvestmentbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blackrockInvestmentbutton.BackgroundImage")));
+            this.blackrockInvestmentbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.blackrockInvestmentbutton.Location = new System.Drawing.Point(286, 266);
+            this.blackrockInvestmentbutton.Name = "blackrockInvestmentbutton";
+            this.blackrockInvestmentbutton.Size = new System.Drawing.Size(214, 94);
+            this.blackrockInvestmentbutton.TabIndex = 5;
+            this.blackrockInvestmentbutton.UseVisualStyleBackColor = false;
+            this.blackrockInvestmentbutton.Click += new System.EventHandler(this.blackrockInvestmentbutton_Click);
             // 
-            // button3
+            // JPinvestmentbutton
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(548, 266);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 94);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = false;
+            this.JPinvestmentbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.JPinvestmentbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("JPinvestmentbutton.BackgroundImage")));
+            this.JPinvestmentbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.JPinvestmentbutton.Location = new System.Drawing.Point(548, 266);
+            this.JPinvestmentbutton.Name = "JPinvestmentbutton";
+            this.JPinvestmentbutton.Size = new System.Drawing.Size(214, 94);
+            this.JPinvestmentbutton.TabIndex = 6;
+            this.JPinvestmentbutton.UseVisualStyleBackColor = false;
+            this.JPinvestmentbutton.Click += new System.EventHandler(this.JPinvestmentbutton_Click);
             // 
             // InvestmentPlanningForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(801, 496);
+            this.Controls.Add(this.JPinvestmentbutton);
+            this.Controls.Add(this.blackrockInvestmentbutton);
+            this.Controls.Add(this.bettermentInvestmentButton);
             this.Controls.Add(this.panel1);
             this.Name = "InvestmentPlanningForm";
             this.Text = "InvestmentPlanning";
@@ -110,8 +113,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bettermentInvestmentButton;
+        private System.Windows.Forms.Button blackrockInvestmentbutton;
+        private System.Windows.Forms.Button JPinvestmentbutton;
     }
 }

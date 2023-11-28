@@ -11,11 +11,10 @@ using System.IO;
 
 namespace SoftwareEngineering
 {
-    public partial class PayplanDebtManagement : Form
+    public partial class BlackrockInvestmentPlanning : Form
     {
         private string vendorInformation = "";
-
-        public PayplanDebtManagement()
+        public BlackrockInvestmentPlanning()
         {
             InitializeComponent();
         }
@@ -25,21 +24,21 @@ namespace SoftwareEngineering
 
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify the URL you want to redirect to
-            string url = "https://www.payplan.com/";
+            string url = "https://www.blackrock.com/uk";
 
             // Open the URL in the default web browser
             System.Diagnostics.Process.Start(url);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             // Save vendor information (for example, in a string)
-            vendorInformation = "Vendor Name: Payplan Debt Management\n" +
-                               "Contact Email: info@payplan.com\n" +
-                               "Contact Number: 1-800-555-5556\n";
+            vendorInformation = "Vendor Name: Blackrock Investment Planning\n" +
+                               "Contact Email: info@blackrock.com\n" +
+                               "Contact Number: 1-800-555-5561\n";
 
             // Generate an HTML file with the vendor information
             string htmlContent = $@"<html>
@@ -48,7 +47,7 @@ namespace SoftwareEngineering
                                    </html>";
 
             // Save the HTML content to a temporary file
-            string tempHtmlFile = Path.Combine(Path.GetTempPath(), "VendorInformation_Payplan.html");
+            string tempHtmlFile = Path.Combine(Path.GetTempPath(), "VendorInformation_Blackrock.html");
             File.WriteAllText(tempHtmlFile, htmlContent);
 
             // Open the HTML file in the default web browser

@@ -21,5 +21,26 @@ namespace SoftwareEngineering
         {
 
         }
+
+        private void xerobudgetingbutton_Click(object sender, EventArgs e)
+        {
+            XeroBudgeting xeroBudgetingForm = new XeroBudgeting(); 
+            xeroBudgetingForm.Show();
+            this.Hide();
+        }
+
+        private void spendeskbudgetingbutton_Click(object sender, EventArgs e)
+        {
+            SpendeskBudgeting spendeskBudgetingForm = new SpendeskBudgeting();
+            spendeskBudgetingForm.Show();
+            this.Hide();
+        }
+
+        private void quickbooksBudgetingbutton_Click(object sender, EventArgs e)
+        {
+            QuickbooksBudgeting quickbooksBudgetingForm = new QuickbooksBudgeting();
+            quickbooksBudgetingForm.Show();
+            this.Hide();
+        }
     }
 }

@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BudgetingForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.xerobudgetingbutton = new System.Windows.Forms.Button();
+            this.spendeskbudgetingbutton = new System.Windows.Forms.Button();
+            this.quickbooksBudgetingbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,47 +56,50 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Budgeting";
             // 
-            // button1
+            // xerobudgetingbutton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(27, 278);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 94);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
+            this.xerobudgetingbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.xerobudgetingbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("xerobudgetingbutton.BackgroundImage")));
+            this.xerobudgetingbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.xerobudgetingbutton.Location = new System.Drawing.Point(27, 278);
+            this.xerobudgetingbutton.Name = "xerobudgetingbutton";
+            this.xerobudgetingbutton.Size = new System.Drawing.Size(214, 94);
+            this.xerobudgetingbutton.TabIndex = 4;
+            this.xerobudgetingbutton.UseVisualStyleBackColor = false;
+            this.xerobudgetingbutton.Click += new System.EventHandler(this.xerobudgetingbutton_Click);
             // 
-            // button2
+            // spendeskbudgetingbutton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(291, 278);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 94);
-            this.button2.TabIndex = 5;
-            this.button2.UseVisualStyleBackColor = false;
+            this.spendeskbudgetingbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.spendeskbudgetingbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("spendeskbudgetingbutton.BackgroundImage")));
+            this.spendeskbudgetingbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.spendeskbudgetingbutton.Location = new System.Drawing.Point(291, 278);
+            this.spendeskbudgetingbutton.Name = "spendeskbudgetingbutton";
+            this.spendeskbudgetingbutton.Size = new System.Drawing.Size(214, 94);
+            this.spendeskbudgetingbutton.TabIndex = 5;
+            this.spendeskbudgetingbutton.UseVisualStyleBackColor = false;
+            this.spendeskbudgetingbutton.Click += new System.EventHandler(this.spendeskbudgetingbutton_Click);
             // 
-            // button3
+            // quickbooksBudgetingbutton
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(547, 278);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 94);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = false;
+            this.quickbooksBudgetingbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.quickbooksBudgetingbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quickbooksBudgetingbutton.BackgroundImage")));
+            this.quickbooksBudgetingbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.quickbooksBudgetingbutton.Location = new System.Drawing.Point(547, 278);
+            this.quickbooksBudgetingbutton.Name = "quickbooksBudgetingbutton";
+            this.quickbooksBudgetingbutton.Size = new System.Drawing.Size(214, 94);
+            this.quickbooksBudgetingbutton.TabIndex = 6;
+            this.quickbooksBudgetingbutton.UseVisualStyleBackColor = false;
+            this.quickbooksBudgetingbutton.Click += new System.EventHandler(this.quickbooksBudgetingbutton_Click);
             // 
             // BudgetingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.quickbooksBudgetingbutton);
+            this.Controls.Add(this.spendeskbudgetingbutton);
+            this.Controls.Add(this.xerobudgetingbutton);
             this.Controls.Add(this.panel1);
             this.Name = "BudgetingForm";
             this.Text = "Budgeting";
@@ -110,8 +113,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button xerobudgetingbutton;
+        private System.Windows.Forms.Button spendeskbudgetingbutton;
+        private System.Windows.Forms.Button quickbooksBudgetingbutton;
     }
 }
