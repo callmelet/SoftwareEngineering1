@@ -66,82 +66,6 @@ namespace SoftwareEngineering
         }
 
 
-        private void addNewClientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //ignore
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-           //nothing here
-        }
-
-        private void EditClient(int rowIndex)
-        {
-            
-        }
-
-        private void DeleteClient(int rowIndex)
-        {
-
-        }
-         
-
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            //nothing here
-        }
-
-        private void ClientSolutionTextBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void AssignedVendorTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clientNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void JobTitleTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CompanyNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EmailAddressTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddressTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PhoneTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void addClientBtn_Click(object sender, EventArgs e)
         {
             // Add new row to the DataSet
@@ -165,16 +89,6 @@ namespace SoftwareEngineering
             UpdateDataGridView();
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //
-        }
 
         private void deleteClientbutton_Click(object sender, EventArgs e)
         {
@@ -251,11 +165,6 @@ namespace SoftwareEngineering
                 // Update the DataGridView after editing
                 UpdateDataGridView();
             }
-        }
-
-        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
-        {
-            //
         }
 
         private void dataGridView1_CellContentClick_3(object sender, DataGridViewCellEventArgs e)

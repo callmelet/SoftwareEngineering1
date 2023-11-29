@@ -266,6 +266,7 @@
     <Compile Include="Homepage.Designer.cs">
       <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomepageBackend.cs" />
     <Compile Include="IndineroTaxPlanning.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +336,7 @@
     <Compile Include="userclients.Designer.cs">
       <DependentUpon>userclients.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserLoginBackend.cs" />
     <Compile Include="UserLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,12 +349,15 @@
     <Compile Include="Userpage.Designer.cs">
       <DependentUpon>Userpage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserpageBackend.cs" />
     <Compile Include="userprofile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="userprofile.Designer.cs">
       <DependentUpon>userprofile.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserprofileBackend.cs" />
+    <Compile Include="UserRegistrationBackend.cs" />
     <Compile Include="UserRegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
