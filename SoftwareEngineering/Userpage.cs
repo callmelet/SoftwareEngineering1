@@ -71,5 +71,9 @@ namespace SoftwareEngineering
             this.Hide();
         }
 
+        private void Userpage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

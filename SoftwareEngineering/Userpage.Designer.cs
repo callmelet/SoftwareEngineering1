@@ -146,6 +146,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Userpage";
             this.Text = "Userpage";
+            this.Load += new System.EventHandler(this.Userpage_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
