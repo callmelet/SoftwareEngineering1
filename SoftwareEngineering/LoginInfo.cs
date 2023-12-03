@@ -10,9 +10,5 @@ namespace SoftwareEngineering
     public static class LoginInfo
     {
         public static string UserName;
-        //private string _userName;
-
-
-
     }
 }

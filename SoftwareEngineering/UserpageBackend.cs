@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -10,13 +6,7 @@ namespace SoftwareEngineering
 {
     internal class UserpageBackend
     {
-        private readonly string connectionString;
-
-        public UserpageBackend(string connectionString)
-        {
-            this.connectionString = connectionString;
-        }
-
+        private readonly string connectionString = ConnectionString.DBConnectionString;
         public List<string> GetDataFromDatabase()
         {
             List<string> solutionNames = new List<string>();

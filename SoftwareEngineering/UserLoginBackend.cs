@@ -1,33 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace SoftwareEngineering
 {
     internal class UserLoginBackend
     {
-        private readonly string connectionString;
+        private readonly string connectionString=ConnectionString.DBConnectionString;
 
-        public UserLoginBackend(string connectionString)
+        public bool PerformLogin(string username, string password, Form currentForm)
         {
-            this.connectionString = connectionString;
-        }
-
-        public void PerformLogin(string username, string password, Form currentForm)
-        {
-            //string username = textBox1username_user.Text;
-            //string password = textBox1userpassword.Text;
-
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
-            {
-                MessageBox.Show("Please fill in both username and password.");
-                return;
-            }
-
+            bool isLogged=false;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -58,29 +40,21 @@ namespace SoftwareEngineering
 
                             if (password == storedPassword)
                             {
-                                // Password matches; login successful
-                                MessageBox.Show("Login successful. Welcome, user!");
-                                LoginInfo.UserName = username;
-
-                                // Open the Userpage form
-                                Userpage userPage = new Userpage();
-                                userPage.Show();
-                                currentForm.Hide();
+                               isLogged = true;
                             }
                             else
                             {
-                                // Password is incorrect
-                                MessageBox.Show("Password is incorrect. Please try again.");
+                                isLogged=false;
                             }
                         }
                     }
                     else
                     {
-                        // The user is not registered
-                        MessageBox.Show("Login failed. Please check your credentials or register if you haven't already.");
+                        isLogged = false;
                     }
                 }
             }
+            return isLogged;
         }
 
     }

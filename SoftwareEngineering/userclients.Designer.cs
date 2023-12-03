@@ -70,6 +70,7 @@
             this.clientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.vendorApplicationDataSet3 = new SoftwareEngineering.VendorApplicationDataSet3();
             this.clientsTableAdapter1 = new SoftwareEngineering.VendorApplicationDataSet3TableAdapters.ClientsTableAdapter();
+            this.backButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendorApplicationDataSet1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -162,7 +163,6 @@
             this.cancelBtn.TabIndex = 18;
             this.cancelBtn.Text = "CANCEL";
             this.cancelBtn.UseVisualStyleBackColor = false;
-//            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // clientNameTextBox
             // 
@@ -170,7 +170,6 @@
             this.clientNameTextBox.Name = "clientNameTextBox";
             this.clientNameTextBox.Size = new System.Drawing.Size(348, 26);
             this.clientNameTextBox.TabIndex = 19;
-//            this.clientNameTextBox.TextChanged += new System.EventHandler(this.clientNameTextBox_TextChanged);
             // 
             // JobTitleTextBox
             // 
@@ -178,7 +177,6 @@
             this.JobTitleTextBox.Name = "JobTitleTextBox";
             this.JobTitleTextBox.Size = new System.Drawing.Size(348, 26);
             this.JobTitleTextBox.TabIndex = 20;
-//            this.JobTitleTextBox.TextChanged += new System.EventHandler(this.JobTitleTextBox_TextChanged);
             // 
             // CompanyNameTextBox
             // 
@@ -186,7 +184,6 @@
             this.CompanyNameTextBox.Name = "CompanyNameTextBox";
             this.CompanyNameTextBox.Size = new System.Drawing.Size(348, 26);
             this.CompanyNameTextBox.TabIndex = 21;
-//            this.CompanyNameTextBox.TextChanged += new System.EventHandler(this.CompanyNameTextBox_TextChanged);
             // 
             // EmailAddressTextBox
             // 
@@ -194,7 +191,6 @@
             this.EmailAddressTextBox.Name = "EmailAddressTextBox";
             this.EmailAddressTextBox.Size = new System.Drawing.Size(348, 26);
             this.EmailAddressTextBox.TabIndex = 22;
-//            this.EmailAddressTextBox.TextChanged += new System.EventHandler(this.EmailAddressTextBox_TextChanged);
             // 
             // AddressTextBox
             // 
@@ -202,7 +198,6 @@
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(348, 26);
             this.AddressTextBox.TabIndex = 23;
-//            this.AddressTextBox.TextChanged += new System.EventHandler(this.AddressTextBox_TextChanged);
             // 
             // PhoneTextBox
             // 
@@ -210,7 +205,6 @@
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(348, 26);
             this.PhoneTextBox.TabIndex = 24;
-//            this.PhoneTextBox.TextChanged += new System.EventHandler(this.PhoneTextBox_TextChanged);
             // 
             // label7
             // 
@@ -234,7 +228,6 @@
             this.ClientSolutionTextBox.Name = "ClientSolutionTextBox";
             this.ClientSolutionTextBox.Size = new System.Drawing.Size(356, 26);
             this.ClientSolutionTextBox.TabIndex = 0;
-//            this.ClientSolutionTextBox.TextChanged += new System.EventHandler(this.ClientSolutionTextBox_TextChanged);
             // 
             // panel2
             // 
@@ -266,7 +259,6 @@
             this.AssignedVendorTextBox.Name = "AssignedVendorTextBox";
             this.AssignedVendorTextBox.Size = new System.Drawing.Size(356, 26);
             this.AssignedVendorTextBox.TabIndex = 2;
-//            this.AssignedVendorTextBox.TextChanged += new System.EventHandler(this.AssignedVendorTextBox_TextChanged);
             // 
             // EditClientbutton
             // 
@@ -423,12 +415,23 @@
             // 
             this.clientsTableAdapter1.ClearBeforeFill = true;
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(465, 588);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(120, 62);
+            this.backButton.TabIndex = 28;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // userclients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1432, 746);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.deleteClientbutton);
             this.Controls.Add(this.EditClientbutton);
@@ -506,5 +509,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jOBTITLEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cOMPANYNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aSSIGNEDVENDORDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button backButton;
     }
 }

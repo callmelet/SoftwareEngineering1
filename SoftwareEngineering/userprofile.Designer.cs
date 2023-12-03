@@ -40,6 +40,7 @@
             this.btnsavesurname = new System.Windows.Forms.Button();
             this.btnsaveemail = new System.Windows.Forms.Button();
             this.btnsavephone = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,7 +97,6 @@
             this.textBoxname.Name = "textBoxname";
             this.textBoxname.Size = new System.Drawing.Size(351, 26);
             this.textBoxname.TabIndex = 4;
-            this.textBoxname.TextChanged += new System.EventHandler(this.textBoxname_TextChanged);
             // 
             // textBoxsurname
             // 
@@ -104,7 +104,6 @@
             this.textBoxsurname.Name = "textBoxsurname";
             this.textBoxsurname.Size = new System.Drawing.Size(351, 26);
             this.textBoxsurname.TabIndex = 5;
-            this.textBoxsurname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBoxemail
             // 
@@ -112,7 +111,6 @@
             this.textBoxemail.Name = "textBoxemail";
             this.textBoxemail.Size = new System.Drawing.Size(351, 26);
             this.textBoxemail.TabIndex = 6;
-            this.textBoxemail.TextChanged += new System.EventHandler(this.textBoxemail_TextChanged);
             // 
             // textBoxphone
             // 
@@ -120,7 +118,6 @@
             this.textBoxphone.Name = "textBoxphone";
             this.textBoxphone.Size = new System.Drawing.Size(351, 26);
             this.textBoxphone.TabIndex = 7;
-            this.textBoxphone.TextChanged += new System.EventHandler(this.textBoxphone_TextChanged);
             // 
             // btnsavename
             // 
@@ -170,12 +167,23 @@
             this.btnsavephone.UseVisualStyleBackColor = false;
             this.btnsavephone.Click += new System.EventHandler(this.btnsavephone_Click);
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(389, 406);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(146, 46);
+            this.backButton.TabIndex = 12;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // userprofile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(895, 464);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.btnsavephone);
             this.Controls.Add(this.btnsaveemail);
             this.Controls.Add(this.btnsavesurname);
@@ -210,5 +218,6 @@
         private System.Windows.Forms.Button btnsavesurname;
         private System.Windows.Forms.Button btnsaveemail;
         private System.Windows.Forms.Button btnsavephone;
+        private System.Windows.Forms.Button backButton;
     }
 }

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace SoftwareEngineering
@@ -16,12 +17,11 @@ namespace SoftwareEngineering
     {
         private readonly UserpageBackend backend;
         private AutoCompleteStringCollection suggestionList;
-        private string connectionString = "Data Source=BOOK-5A3M5LR9FE\\SQLEXPRESS;Initial Catalog=VendorApplication;Integrated Security=True";
 
         public Userpage()
         {
             InitializeComponent();
-            backend = new UserpageBackend(connectionString);
+            backend = new UserpageBackend();
             InitializeAutoComplete();
         }
 
@@ -74,6 +74,19 @@ namespace SoftwareEngineering
         private void Userpage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoginInfo.UserName = null;
+            Homepage login = new Homepage();
+            login.Show();
+            this.Close();
         }
     }
 }

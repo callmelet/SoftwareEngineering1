@@ -230,6 +230,7 @@
     <Compile Include="Budgeting.Designer.cs">
       <DependentUpon>Budgeting.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConnectionString.cs" />
     <Compile Include="DebtManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +337,7 @@
     <Compile Include="userclients.Designer.cs">
       <DependentUpon>userclients.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserclientsBackend.cs" />
     <Compile Include="UserLoginBackend.cs" />
     <Compile Include="UserLoginForm.cs">
       <SubType>Form</SubType>
@@ -357,6 +359,7 @@
       <DependentUpon>userprofile.cs</DependentUpon>
     </Compile>
     <Compile Include="UserprofileBackend.cs" />
+    <Compile Include="UserProfileModel.cs" />
     <Compile Include="UserRegistrationBackend.cs" />
     <Compile Include="UserRegistrationForm.cs">
       <SubType>Form</SubType>

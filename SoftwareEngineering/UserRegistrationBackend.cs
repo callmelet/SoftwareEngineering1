@@ -5,84 +5,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SoftwareEngineering
 {
     internal class UserRegistrationBackend
     {
-        private readonly string connectionString;
+        private readonly string connectionString = ConnectionString.DBConnectionString;
 
-        public UserRegistrationBackend(string connectionString)
+        public int CheckUserExistsOrNot(string username)
         {
-            this.connectionString = connectionString;
-        }
+            int userCount = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
-        public void PerformRegistration(string username, string password, string confirmPassword, bool isUserRegistered)
-        {
-            // Existing registration logic from button1register_user_Click
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
-            {
-                MessageBox.Show("Please fill in all fields.");
-                return;
-            }
+                // Check if the user already exists in the Users table
+                string checkUserQuery = "SELECT COUNT(*) FROM user_table WHERE Username = @Username";
 
-            if (password != confirmPassword)
-            {
-                MessageBox.Show("Passwords do not match. Please try again.");
-                return;
-            }
-
-            // Check if the user is already registered
-            if (isUserRegistered)
-            {
-                MessageBox.Show("User has already been registered. Please log in.");
-            }
-            else
-            {
-                // Implement registration logic by inserting the user into the database
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlCommand checkUserCommand = new SqlCommand(checkUserQuery, connection))
                 {
-                    connection.Open();
-
-                    // Check if the user already exists in the Users table
-                    string checkUserQuery = "SELECT COUNT(*) FROM user_table WHERE Username = @Username";
-
-                    using (SqlCommand checkUserCommand = new SqlCommand(checkUserQuery, connection))
-                    {
-                        checkUserCommand.Parameters.AddWithValue("@Username", username);
-                        int userCount = (int)checkUserCommand.ExecuteScalar();
-
-                        if (userCount > 0)
-                        {
-                            MessageBox.Show("User already exists. Please log in.");
-                        }
-                        else
-                        {
-                            // Insert the user into the Users table
-                            string insertUserQuery = "INSERT INTO user_table (Username, Password, IsUser) VALUES (@Username, @Password, 1)";
-
-                            using (SqlCommand insertUserCommand = new SqlCommand(insertUserQuery, connection))
-                            {
-                                insertUserCommand.Parameters.AddWithValue("@Username", username);
-                                insertUserCommand.Parameters.AddWithValue("@Password", password);
-
-                                int rowsAffected = insertUserCommand.ExecuteNonQuery();
-
-                                if (rowsAffected > 0)
-                                {
-                                    MessageBox.Show("Registration successful. You can now log in.");
-                                    isUserRegistered = true;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Registration failed. Please try again.");
-                                }
-                            }
-                        }
-                    }
+                    checkUserCommand.Parameters.AddWithValue("@Username", username);
+                    userCount = (int)checkUserCommand.ExecuteScalar();
                 }
             }
+            return userCount;
         }
+        public int PerformRegistration(string username, string password)
+        {
+            int rowsAffected = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
+                string insertUserQuery = "INSERT INTO user_table (Username, Password, IsUser) VALUES (@Username, @Password, 1)";
+
+                using (SqlCommand insertUserCommand = new SqlCommand(insertUserQuery, connection))
+                {
+                    insertUserCommand.Parameters.AddWithValue("@Username", username);
+                    insertUserCommand.Parameters.AddWithValue("@Password", password);
+                    rowsAffected = insertUserCommand.ExecuteNonQuery();
+                }
+            }
+            return rowsAffected;
+        }
     }
 }

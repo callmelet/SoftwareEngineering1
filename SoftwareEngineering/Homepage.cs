@@ -14,7 +14,6 @@ namespace SoftwareEngineering
     public partial class Homepage : Form
     {
         private SqlConnection connection;
-        private string connectionString = "Data Source=BOOK-5A3M5LR9FE;Network Library=dbmssocn;Initial Catalog=VendorApplication;Integrated Security=True";
         private readonly HomepageBackend backend;
             
         public Homepage()
@@ -42,16 +41,31 @@ namespace SoftwareEngineering
 
         private void loginbutton_Click(object sender, EventArgs e)
         {
-            backend.LoginButtonClicked(radioButtonUSER.Checked, radioButtonADMIN.Checked);
-            this.Hide();
+            if(!radioButtonUSER.Checked && !radioButtonADMIN.Checked)
+            {
+                MessageBox.Show("Please select one option");
+            }
+            else
+            {
+                backend.LoginButtonClicked(radioButtonUSER.Checked, radioButtonADMIN.Checked);
+                this.Hide();
+            }
+           
         }
         
 
         private void registerbutton_Click(object sender, EventArgs e)
         {
-            backend.RegisterButtonClicked(radioButtonUSER.Checked, radioButtonADMIN.Checked);
-            this.Hide();
-        }    
-            
+            if (!radioButtonUSER.Checked && !radioButtonADMIN.Checked)
+            {
+                MessageBox.Show("Please select one option");
+            }
+            else
+            {
+                backend.RegisterButtonClicked(radioButtonUSER.Checked, radioButtonADMIN.Checked);
+                this.Hide();
+            }
+        }
+
     }
 }

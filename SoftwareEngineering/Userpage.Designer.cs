@@ -30,16 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Userpage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userclientsbutton = new System.Windows.Forms.Button();
             this.userprofilebutton = new System.Windows.Forms.Button();
             this.usersearchbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.searchbutton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Logout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -47,6 +48,7 @@
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.Logout);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.userclientsbutton);
             this.panel1.Controls.Add(this.userprofilebutton);
@@ -54,6 +56,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(243, 515);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // userclientsbutton
             // 
@@ -125,17 +139,17 @@
             this.searchbutton.UseVisualStyleBackColor = true;
             this.searchbutton.Click += new System.EventHandler(this.searchbutton_Click);
             // 
-            // pictureBox1
+            // Logout
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout.Location = new System.Drawing.Point(35, 384);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(161, 35);
+            this.Logout.TabIndex = 8;
+            this.Logout.Text = "Logout";
+            this.Logout.UseVisualStyleBackColor = true;
+            this.Logout.Click += new System.EventHandler(this.button1_Click);
             // 
             // Userpage
             // 
@@ -148,9 +162,9 @@
             this.Text = "Userpage";
             this.Load += new System.EventHandler(this.Userpage_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,5 +179,6 @@
         private System.Windows.Forms.Button searchbutton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Logout;
     }
 }
