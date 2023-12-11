@@ -84,7 +84,7 @@
             this.radioButtonUSER.TabStop = true;
             this.radioButtonUSER.Text = "USER";
             this.radioButtonUSER.UseVisualStyleBackColor = false;
-            this.radioButtonUSER.CheckedChanged += new System.EventHandler(this.radioButtonUSER_CheckedChanged);
+//            this.radioButtonUSER.CheckedChanged += new System.EventHandler(this.radioButtonUSER_CheckedChanged);
             // 
             // radioButtonADMIN
             // 
@@ -97,7 +97,7 @@
             this.radioButtonADMIN.TabStop = true;
             this.radioButtonADMIN.Text = "ADMIN";
             this.radioButtonADMIN.UseVisualStyleBackColor = false;
-            this.radioButtonADMIN.CheckedChanged += new System.EventHandler(this.radioButtonADMIN_CheckedChanged);
+//            this.radioButtonADMIN.CheckedChanged += new System.EventHandler(this.radioButtonADMIN_CheckedChanged);
             // 
             // panel1
             // 
@@ -134,7 +134,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Homepage";
             this.Text = "Citisoft-Homepage";
-            this.Load += new System.EventHandler(this.Form1_Load);
+//            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -4,9 +4,12 @@ using System.Windows.Forms;
 
 namespace SoftwareEngineering
 {
+    // UserpageBackend class handles the backend logic for the Userpage
     internal class UserpageBackend
     {
         private readonly string connectionString = ConnectionString.DBConnectionString;
+
+        // Retrieve solution names from the database
         public List<string> GetDataFromDatabase()
         {
             List<string> solutionNames = new List<string>();
@@ -30,10 +33,12 @@ namespace SoftwareEngineering
             return solutionNames;
         }
 
+        // Navigate to a specific solution based on the user's selection
         public void NavigateToSolution(string solutionName)
         {
             switch (solutionName)
             {
+                // Open the corresponding form for each solution
                 case "Investment Planning":
                     InvestmentPlanningForm investmentPlanningForm = new InvestmentPlanningForm();
                     investmentPlanningForm.Show();
@@ -55,23 +60,11 @@ namespace SoftwareEngineering
                     debtManagementForm.Show();
                     break;
                 default:
+                    // Display an error message for invalid solution names
                     MessageBox.Show("The solution you are looking for does not exist. Please check the name and try again.");
                     break;
             }
         }
 
-        public void OpenUserProfileForm()
-        {
-            // Open the userprofile form
-            userprofile userProfileForm = new userprofile();
-            userProfileForm.Show();
-        }
-
-        public void OpenUserClientsForm()
-        {
-            // Open the userclients form
-            userclients userClientsForm = new userclients();
-            userClientsForm.Show();
-        }
     }
 }

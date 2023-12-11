@@ -162,6 +162,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UserRegistrationForm";
             this.Text = "userRegisterForm";
+//            this.Load += new System.EventHandler(this.UserRegistrationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

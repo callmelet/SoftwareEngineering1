@@ -1,24 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SoftwareEngineering
 {
+    // Backend class for the Homepage
     internal class HomepageBackend
     {
+        // Method to handle the "Login" button click
         public void LoginButtonClicked(bool isUserSelected, bool isAdminSelected)
         {
+            // to Check if the user selected "User" and clicked "Login"
             if (isUserSelected)
             {
-                // The user selected "User" and clicked "Login"
+                // If the user selected "User" and clicked "Login", show the UserLoginForm
                 UserLoginForm userLoginForm = new UserLoginForm();
                 userLoginForm.Show();
             }
             else if (isAdminSelected)
             {
-                // The user selected "Admin" and clicked "Login"
+                // If the user selected "Admin" and clicked "Login", show the AdminLoginForm
                 AdminLoginForm adminLoginForm = new AdminLoginForm();
                 adminLoginForm.Show();
             }
@@ -28,13 +26,13 @@ namespace SoftwareEngineering
         {
             if (isUserSelected)
             {
-                // The user selected "User" and clicked "Register"
+                // If the user selected "User" and clicked "Register", show the UserRegistrationForm
                 UserRegistrationForm userRegistrationForm = new UserRegistrationForm();
                 userRegistrationForm.Show();
             }
             else if (isAdminSelected)
             {
-                // The user selected "Admin" and clicked "Register"
+                // If the user selected "Admin" and clicked "Register", show the AdminRegistrationForm
                 AdminRegistrationForm adminRegistrationForm = new AdminRegistrationForm();
                 adminRegistrationForm.Show();
             }

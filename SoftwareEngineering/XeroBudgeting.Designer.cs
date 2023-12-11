@@ -334,6 +334,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(668, 635);
             this.panel4.TabIndex = 14;
+//            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // button2
             // 

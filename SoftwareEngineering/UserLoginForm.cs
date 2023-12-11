@@ -6,24 +6,30 @@ namespace SoftwareEngineering
     public partial class UserLoginForm : Form
     {
         private readonly UserLoginBackend backend;
+
+        // Constructor for the UserLoginForm
         public UserLoginForm()
         {
             InitializeComponent();
             backend = new UserLoginBackend();
         }
 
+        // Event handler for the "Login" button click
         private void loginbutton1_user_Click(object sender, EventArgs e)
         {
+            // Retrieve user-entered values from textboxes
             string username = textBox1username_user.Text;
             string password = textBox1userpassword.Text;
 
+            // Validate input fields
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please fill in both username and password.");
                 return;
             }
 
-            bool userLogged=backend.PerformLogin(username, password, this);
+            // Invoke the PerformLogin method in the backend to check user credentials
+            bool userLogged =backend.PerformLogin(username, password, this);
             if (userLogged)
             {
                 // Password matches; login successful
@@ -42,13 +48,17 @@ namespace SoftwareEngineering
             }
         }
          
-
         private void backbutton_Click(object sender, EventArgs e)
         {
             // Go back to the homepage
             Homepage homepage = new Homepage();
             homepage.Show();
             this.Hide();
+        }
+
+        private void UserLoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
