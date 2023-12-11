@@ -6,15 +6,15 @@ using System.Data.SqlClient;
 namespace SoftwareEngineering
 {
     public partial class userclients : Form
-    {
+    {   
+        private readonly string connectionString = ConnectionString.DBConnectionString;
         private SqlDataAdapter dataAdapter;
         private DataSet dataSet;
         private int selectedRowIndex = -1;
-        private readonly UserclientsBackend userClientBackend;
+        //private readonly UserclientsBackend userClientBackend;
 
         public userclients()
         {
-            userClientBackend= new UserclientsBackend();
             InitializeComponent();
             AssignDataToDataGrid();
         }
@@ -22,7 +22,10 @@ namespace SoftwareEngineering
         public void AssignDataToDataGrid()
         {
             dataSet = new DataSet();
-            dataAdapter =userClientBackend.InitializeDataSet();
+            //dataAdapter =userClientBackend.InitializeDataSet();
+            dataAdapter = new SqlDataAdapter("SELECT * FROM Clients", connectionString);
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+            //
             dataAdapter.Fill(dataSet, "Clients");
 
             dataGridView1.DataSource = dataSet.Tables["Clients"];
@@ -37,9 +40,10 @@ namespace SoftwareEngineering
             // Subscribe to the CellClick event
             dataGridView1.CellClick += dataGridView1_CellContentClick_3;
         }
+
         private void userclients_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vendorApplicationDataSet3.Clients' table. You can move, or remove it, as needed.
+            // This line of code loads data into the 'vendorApplicationDataSet3.Clients' table. 
             this.clientsTableAdapter1.Fill(this.vendorApplicationDataSet3.Clients);
         }     
 

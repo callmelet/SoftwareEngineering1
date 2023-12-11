@@ -1,23 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace SoftwareEngineering
-{   
-
+{
+    // Userpage class represents the main page for a logged-in user
     public partial class Userpage : Form
     {
         private readonly UserpageBackend backend;
         private AutoCompleteStringCollection suggestionList;
 
+        // Constructor initializes the Userpage form and backend
         public Userpage()
         {
             InitializeComponent();
@@ -25,6 +18,7 @@ namespace SoftwareEngineering
             InitializeAutoComplete();
         }
 
+        // Initialize the AutoComplete feature for the search box
         private void InitializeAutoComplete()
         {
             suggestionList = new AutoCompleteStringCollection();
@@ -34,7 +28,7 @@ namespace SoftwareEngineering
             usersearchbox.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
-
+        // Populate the AutoComplete suggestion list from the database
         private void PopulateSuggestionList()
         {
             try
@@ -48,6 +42,7 @@ namespace SoftwareEngineering
             }
         }
 
+        // Event handler for the "User Profile" button click, where users can view their own profile
         private void userprofile_Click(object sender, EventArgs e)
         {
             // Open the userprofile form
@@ -56,13 +51,15 @@ namespace SoftwareEngineering
             this.Hide();
         }
 
-
+        // Event handler for the "Search" button click, where the users can search for solutions
         private void searchbutton_Click(object sender, EventArgs e)
         {   
             string selectedSolution = usersearchbox.Text;
             backend.NavigateToSolution(selectedSolution);
+            
         }
 
+        // Event handler for the "User Clients" button click, where users can view their clients
         private void userclientsbutton_Click(object sender, EventArgs e)
         {
             // Open the userclients form
@@ -71,16 +68,7 @@ namespace SoftwareEngineering
             this.Hide();
         }
 
-        private void Userpage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        // Event handler for the "Logout" button click
         private void button1_Click(object sender, EventArgs e)
         {
             LoginInfo.UserName = null;
@@ -88,5 +76,6 @@ namespace SoftwareEngineering
             login.Show();
             this.Close();
         }
+
     }
 }

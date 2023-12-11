@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -13,12 +6,16 @@ namespace SoftwareEngineering
 {
     public partial class XeroBudgeting : Form
     {
+        // String to store vendor information
         private string vendorInformation = "";
+
+        // Constructor to initialize the form
         public XeroBudgeting()
         {
             InitializeComponent();
         }
 
+        // Event handler for the Xero website link click
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify the URL you want to redirect to
@@ -28,6 +25,7 @@ namespace SoftwareEngineering
             System.Diagnostics.Process.Start(url);
         }
 
+        // Event handler for the "Open PDF" button click
         private void button2_Click(object sender, EventArgs e)
         {
             // Save vendor information (for example, in a string)
@@ -48,5 +46,6 @@ namespace SoftwareEngineering
             // Open the HTML file in the default web browser
             System.Diagnostics.Process.Start(tempHtmlFile);
         }
+
     }
 }

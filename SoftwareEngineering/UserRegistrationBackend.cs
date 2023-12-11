@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+﻿using System.Data.SqlClient;
 
 namespace SoftwareEngineering
 {
+    // Backend class for user registration logic
     internal class UserRegistrationBackend
     {
+        // Connection string to the database, retrieved from the ConnectionString class
         private readonly string connectionString = ConnectionString.DBConnectionString;
 
+        // Method to check if the user already exists in the database
         public int CheckUserExistsOrNot(string username)
         {
             int userCount = 0;
@@ -31,6 +27,8 @@ namespace SoftwareEngineering
             }
             return userCount;
         }
+
+        // Method to perform user registration
         public int PerformRegistration(string username, string password)
         {
             int rowsAffected = 0;
@@ -38,6 +36,7 @@ namespace SoftwareEngineering
             {
                 connection.Open();
 
+                // SQL query to insert a new user into the user_table
                 string insertUserQuery = "INSERT INTO user_table (Username, Password, IsUser) VALUES (@Username, @Password, 1)";
 
                 using (SqlCommand insertUserCommand = new SqlCommand(insertUserQuery, connection))

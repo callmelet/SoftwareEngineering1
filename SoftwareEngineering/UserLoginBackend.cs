@@ -7,6 +7,7 @@ namespace SoftwareEngineering
     {
         private readonly string connectionString=ConnectionString.DBConnectionString;
 
+        // Method to perform user login
         public bool PerformLogin(string username, string password, Form currentForm)
         {
             bool isLogged=false;
@@ -22,6 +23,7 @@ namespace SoftwareEngineering
                     bool isUser = false;
                     checkUserCommand.Parameters.AddWithValue("@Username", username);
 
+                    // Execute the SQL command to retrieve user details (IsUser) from the database
                     var userdetails = checkUserCommand.ExecuteScalar();
                     if (userdetails != null)
                     {
@@ -31,23 +33,27 @@ namespace SoftwareEngineering
                     if (isUser)
                     {
                         // User is registered; check the password
-                        string checkPasswordQuery = "SELECT Password FROM user_table WHERE Username = @Username";
+                        string checkPasswordQuery = "SELECT Password FROM user_table WHERE Username = @Username";          
 
                         using (SqlCommand checkPasswordCommand = new SqlCommand(checkPasswordQuery, connection))
                         {
+                            // Set the parameter for the username
                             checkPasswordCommand.Parameters.AddWithValue("@Username", username);
+                            // Retrieve the stored password from the database
                             string storedPassword = (string)checkPasswordCommand.ExecuteScalar();
 
+                            // Compare the entered password with the stored password
                             if (password == storedPassword)
                             {
-                               isLogged = true;
+                               isLogged = true;// Set the login status to true if the passwords match
                             }
                             else
                             {
-                                isLogged=false;
+                                isLogged=false;// Set the login status to false if the passwords do not match
                             }
                         }
                     }
+                    // If the user is not registered, set the login status to false
                     else
                     {
                         isLogged = false;

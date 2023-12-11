@@ -103,7 +103,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "BudgetingForm";
             this.Text = "Budgeting";
-            this.Load += new System.EventHandler(this.Budgeting_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
